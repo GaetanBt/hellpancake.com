@@ -1,0 +1,6 @@
+---
+meta:
+  title: Posts
+---
+
+# Posts

@@ -1,0 +1,18 @@
+[
+  {
+    "label": "<span class=\"text-stack\">Hell</span> Pancake",
+    "href": "/"
+  },
+  {
+    "label": "Posts",
+    "href": "/posts/"
+  },
+  {
+    "label": "About me",
+    "href": "/about-me/"
+  },
+  {
+    "label": "Cookbook",
+    "href": "/cookbook/"
+  }
+]
