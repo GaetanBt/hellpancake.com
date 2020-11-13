@@ -1,0 +1,496 @@
+@charset "UTF-8";
+
+/* --------------------------------------------------------------------------------
+   Fonts
+   -------------------------------------------------------------------------------- */
+
+@font-face {
+  font-display: swap;
+  font-family: "Hind";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/hind-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Hind";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/hind-bold.woff2") format("woff2");
+}
+
+
+
+/* --------------------------------------------------------------------------------
+   General
+   -------------------------------------------------------------------------------- */
+
+:root {
+  /* Colors */
+  --primary: #4e4ef6; /* #6161fe */
+  --text-color: #444;
+  --text-muted: #767676;
+  --grey-bg: #f6f6f6;
+  --blueish-bg: #eeeefe;
+
+  /* Typography */
+  --line-height: 1.5;
+
+  /* Icons */
+  /* External icon by Luc Poupard → https://thenounproject.com/icon/13883/ */
+  --external: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M91.875 62H85v23H15V15h23V0H0v100h100V62z'/%3E%3Cpath d='M54 0v.627l17.787 17.85L52.701 38H38v24h24V49.799l20.773-20.337L99.374 46H100V0z'/%3E%3C/svg%3E");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #fff;
+  color: #444;
+  font-family: "Ubuntu", "Arial", "Helvetica", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+
+:focus {
+  outline: 3px solid currentColor;
+  outline-offset: 2px;
+}
+
+img[alt] {
+  height: auto;
+  max-width: 100%;
+}
+
+abbr[title] {
+  cursor: help;
+}
+
+
+
+/* --------------------------------------------------------------------------------
+   Typography
+   -------------------------------------------------------------------------------- */
+
+a {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* External links */
+a[href^="http"]::after {
+  background: currentColor;
+  content: "";
+  display: inline-block;
+  height: .75em;
+  margin-left: .5ch;
+  mask: var(--external) no-repeat 50% 50%;
+  width: .75em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  --flow-space: 2em;
+  font-family: "Hind", "Arial", "Helvetica", sans-serif;
+}
+
+h1::after{
+  background: var(--primary);
+  content: "";
+  display: block;
+  height: .125rem;
+  margin-top: .25rem;
+  width: 5rem;
+}
+
+
+
+/* --------------------------------------------------------------------------------
+   Layout
+   -------------------------------------------------------------------------------- */
+
+/**
+ * Centered container
+ */
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80ch;
+  width: 90%;
+}
+
+
+
+/**
+ * Vertical rythm
+ */
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+
+
+/**
+ * Header
+ */
+
+[role="banner"] {
+  background-color: var(--blueish-bg);
+  margin-bottom: 7rem;
+  padding: 2rem 0;
+}
+
+
+
+/**
+ * Footer
+ */
+
+[role="contentinfo"] {
+  padding: 3rem 0 1rem;
+}
+
+
+
+/* --------------------------------------------------------------------------------
+   Components
+   -------------------------------------------------------------------------------- */
+
+/**
+ * Navigation
+ */
+
+[role="navigation"] {
+  --nav-links-padding: 1rem;
+  margin: 0 calc(-1 * var(--nav-links-padding));
+}
+
+.Nav {
+  width: 100%;
+}
+
+.Nav-item--home {
+  flex-grow: 1;
+}
+
+.Nav-item:not(.Nav-item--home) {
+  grid-row: 2;
+}
+
+.Nav-link {
+  display: inline-block;
+  font-size: 1.25em;
+  padding: var(--nav-links-padding);
+  text-decoration-thickness: 2px;
+}
+
+.Nav-link:not([aria-current]) {
+  text-decoration: none;
+}
+
+.Nav-item--home .Nav-link {
+  font-size: 1.5em;
+  letter-spacing: -1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+
+/**
+ * Code examples
+ */
+
+code,
+pre {
+  background-color: var(--blueish-bg); /* #e1e1eb */
+}
+
+code {
+  border-radius: 3px;
+  padding: .25em;
+}
+
+pre {
+  border-radius: 10px;
+  padding: 1.5rem;
+  overflow-x: scroll;
+}
+
+pre code {
+  font-size: inherit;
+  padding: 0;
+}
+
+
+
+/**
+ * Table
+ */
+
+table {
+  border-collapse: collapse;
+  border: 1px solid var(--primary);
+  border-radius: 3px;
+  table-layout: fixed;
+  width: 100%;
+}
+
+table > caption {
+  padding: .5rem;
+}
+
+thead {
+  border-bottom: 2px solid var(--primary);
+}
+
+th,
+td {
+  padding: .75rem;
+}
+
+th {
+  text-align: left;
+}
+
+
+
+/**
+ * Avatar
+ */
+
+.Avatar {
+  border-radius: 50%;
+  display: block;
+}
+
+
+
+/**
+ * Figures
+ */
+
+figure {
+  --flow-space: 2rem;
+}
+
+figure > figcaption {
+  text-align: center;
+}
+
+
+
+/**
+ * Quotes
+ */
+
+blockquote {
+  quotes: "«\00A0" "\00A0»";
+}
+
+blockquote p::before,
+blockquote p::after {
+  font-size: 1.25em;
+}
+
+blockquote p::before {
+  content: open-quote;
+}
+
+blockquote p::after {
+  content: close-quote;
+}
+
+blockquote footer {
+  color: var(--text-muted);
+}
+
+blockquote footer::before {
+  content: "\2014\00A0";
+}
+
+
+
+/* --------------------------------------------------------------------------------
+   Utilities
+   -------------------------------------------------------------------------------- */
+
+/*
+  Improved screen reader only CSS class
+  @author Gaël Poupard
+    @note Based on Yahoo!'s technique
+    @author Thierry Koblentz
+    @see https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html
+  * 1.
+    @note `clip` is deprecated but works everywhere
+    @see https://developer.mozilla.org/en-US/docs/Web/CSS/clip
+  * 2.
+    @note `clip-path` is the future-proof version, but not very well supported yet
+    @see https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path
+    @see http://caniuse.com/#search=clip-path
+    @author Yvain Liechti
+    @see https://twitter.com/ryuran78/status/778943389819604992
+  * 3.
+    @note preventing text to be condensed
+    author J. Renée Beach
+    @see https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+    @note Drupal 8 goes with word-wrap: normal instead
+    @see https://www.drupal.org/node/2045151
+    @see http://cgit.drupalcode.org/drupal/commit/?id=5b847ea
+  * 4.
+    @note !important is important
+    @note Obviously you wanna hide something
+    @author Harry Roberts
+    @see https://csswizardry.com/2016/05/the-importance-of-important/
+*/
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;  /* 2 */
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important; /* 3 */
+}
+
+
+
+/*
+  Use in conjunction with .sr-only to only display content when it's focused.
+  @note Useful for skip links
+  @see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+  @note Based on a HTML5 Boilerplate technique, included in Bootstrap
+  @note Fixed a bug with position: static on iOS 10.0.2 + VoiceOver
+    @author Sylvain Pigeard
+    @see https://github.com/twbs/bootstrap/issues/20732
+*/
+
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+  clip: auto !important;
+  -webkit-clip-path: none !important;
+  clip-path: none !important;
+  height: auto !important;
+  margin: auto !important;
+  overflow: visible !important;
+  width: auto !important;
+  white-space: normal !important;
+}
+
+
+
+/**
+ * Colors
+ */
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.text-stack {
+  color: var(--text-color) !important;
+}
+
+
+
+/**
+ * Text
+ */
+
+.text-bold {
+  font-weight: 700 !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+
+
+/**
+ * Flex
+ */
+
+.flex {
+  display: flex !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+
+
+/**
+ * Lists
+ */
+
+.list-reset {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+
+/**
+ * Hiding
+ */
+
+[hidden] {
+  display: none !important;
+}
+
+
+/**
+ * Spacings
+ */
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+
+
+/* --------------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 599px) {
+  [role="banner"] {
+    margin-bottom: 3rem;
+  }
+
+  .Nav-item--home {
+    flex-basis: 100%;
+    text-align: center;
+  }
+}

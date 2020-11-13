@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ meta.title }} | Hell Pancake</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/style.css">
+  </head>
+  <body>
+    {%- include "components/header.njk" -%}
+    <main class="container flow" role="main">
+      {%- block content -%}{%- endblock -%}
+    </main>
+    {%- include "components/footer.njk" -%}
+  </body>
+</html>
