@@ -1,6 +1,11 @@
 ---
 meta:
   title: UI development and web accessibility
+eleventyNavigation:
+  key: Home
+  title: <span class="text-stack">Hell</span> Pancake<span class="sr-only">, go to homepage</span>
+  titleAttr: Hell Pancake, go to homepage
+  order: 1
 ---
 
 # Hello there !

@@ -1,7 +1,8 @@
 {%- macro navLink(link) -%}
-  {%- set active = page.url == link.href -%}
+  {%- set active = page.url == link.url -%}
+  {%- set hasTitle = link.titleAttr and link.titleAttr != "" -%}
 
-  <a href="{{ link.href }}" class="Nav-link"{% if active %} aria-current="page"{% endif %}>
-    {{ link.label | safe }}
+  <a href="{{ link.url }}" class="Nav-link"{% if active %} aria-current="page"{% endif %}{% if hasTitle %} title="{{ link.titleAttr }}"{% endif %}>
+    {{ link.title | safe }}
   </a>
 {%- endmacro -%}

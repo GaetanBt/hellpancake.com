@@ -1,6 +1,9 @@
 ---
 meta:
   title: About me
+eleventyNavigation:
+  key: About me
+  order: 3
 ---
 
 <img src="/assets/images/honk.jpg" class="Avatar" alt="Angry clown with ginger hair avatar" width="120" height="120">
