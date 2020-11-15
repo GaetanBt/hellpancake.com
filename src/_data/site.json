@@ -1,0 +1,15 @@
+{
+  "locales": {
+    "en": {
+      "code": "en",
+      "dir": "ltr",
+      "displayName": "english",
+      "default": true
+    },
+    "fr": {
+      "code": "fr",
+      "dir": "ltr",
+      "displayName": "français"
+    }
+  }
+}

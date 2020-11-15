@@ -2,8 +2,8 @@
 
 <nav  role="navigation">
   <ul class="Nav flex flex-wrap justify-content-center list-reset">
-    {%- for entry in collections.all | eleventyNavigation -%}
-      <li class="Nav-item{{ " Nav-item--home" if entry.key == "Home" }}">
+    {%- for entry in collections[locale] | eleventyNavigation -%}
+      <li class="Nav-item{{ " Nav-item--home" if entry.isHomePage == true }}">
         {{ ui.navLink(entry) }}
       </li>
     {%- endfor -%}
