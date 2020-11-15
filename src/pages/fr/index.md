@@ -1,14 +1,15 @@
 ---
 meta:
-  title: UI development and web accessibility
+  title: Intégration web et accessibilité numérique
 eleventyNavigation:
-  key: Home
-  title: <span class="text-stack">Hell</span> Pancake<span class="sr-only">, go to homepage</span>
-  titleAttr: Hell Pancake, go to homepage
+  key: Accueil
+  isHomePage: true
+  title: <span class="text-stack">Hell</span> Pancake<span class="sr-only">, retour à l'accueil</span>
+  titleAttr: Hell Pancake, retour à l'accueil
   order: 1
 ---
 
-# Hello there !
+# Bienvenue !
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias distinctio dolores id illum, inventore laborum, minus sed, sit suscipit voluptatibus voluptatum. Cumque dolor eligendi hic mollitia non quasi ut? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolorum, eum ex, harum, impedit incidunt iure minus nam natus nemo neque nulla numquam officia optio rerum sapiente sed soluta veniam.
 
