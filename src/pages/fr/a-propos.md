@@ -4,6 +4,7 @@ meta:
 eleventyNavigation:
   key: À propos
   order: 3
+translationKey: Page-about
 ---
 
 <img src="/assets/images/honk.jpg" class="Avatar" alt="Angry clown with ginger hair avatar" width="120" height="120">

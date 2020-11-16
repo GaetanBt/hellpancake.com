@@ -62,6 +62,10 @@ module.exports = function (eleventyConfig) {
     }
   }
 
+  function getAvailableLocales () {
+    return Object.keys(site.locales)
+  }
+
 
 
   /**
@@ -81,6 +85,41 @@ module.exports = function (eleventyConfig) {
     return path
       .filter(pathFragment => !excludeFromPath.includes(pathFragment))
       .join('/') + '/index.html'
+  })
+
+  eleventyConfig.addFilter('changelang', function (pages, currentUrl, currentLocale) {
+    const currentTranslationKey = this.ctx.translationKey
+    const changelang = []
+
+    getAvailableLocales().forEach(availableLocale => {
+      const {
+        code,
+        displayName
+      } = site.locales[availableLocale]
+
+      let url = code === getDefaultLocale() ? '/' : `/${code}`
+
+      if (currentTranslationKey) {
+        for (let page of pages) {
+          if (currentTranslationKey === page.data.translationKey && code === page.data.locale) {
+            url = page.url
+          }
+        }
+      } else {
+        if (currentLocale === code) {
+          url = currentUrl
+        }
+      }
+
+      changelang.push({
+        url: url,
+        label: displayName,
+        isActive: currentLocale === code,
+        targetLocale: code
+      })
+    })
+
+    return changelang
   })
 
 

@@ -4,6 +4,7 @@ meta:
 eleventyNavigation:
   key: Articles
   order: 2
+translationKey: Page-posts
 ---
 
 # Articles
