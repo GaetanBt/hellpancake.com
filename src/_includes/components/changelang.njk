@@ -1,0 +1,11 @@
+{%- import "components/ui.njk" as ui with context -%}
+
+<ul>
+  {%- for item in collections.all | changelang(page.url, locale) -%}
+    <li>
+      <a href="{{ item.url }}" lang="{{ item.targetLocale }}" hreflang="{{ item.targetLocale }}"{% if item.isActive %} aria-current="true"{% endif %}>
+        {{ item.label | capitalize }}
+      </a>
+    </li>
+  {%- endfor -%}
+</ul>

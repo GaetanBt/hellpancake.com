@@ -7,6 +7,7 @@ eleventyNavigation:
   title: <span class="text-stack">Hell</span> Pancake<span class="sr-only">, go to homepage</span>
   titleAttr: Hell Pancake, go to homepage
   order: 1
+translationKey: Page-home
 ---
 
 # Hello there !

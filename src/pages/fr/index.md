@@ -7,6 +7,7 @@ eleventyNavigation:
   title: <span class="text-stack">Hell</span> Pancake<span class="sr-only">, retour à l'accueil</span>
   titleAttr: Hell Pancake, retour à l'accueil
   order: 1
+translationKey: Page-home
 ---
 
 # Bienvenue !
