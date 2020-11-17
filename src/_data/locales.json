@@ -1,0 +1,18 @@
+{
+  "en": {
+    "changelang": {
+      "label": "Switch lang"
+    },
+    "navigation": {
+      "label": "Main navigation"
+    }
+  },
+  "fr": {
+    "changelang": {
+      "label": "Changement de langue"
+    },
+    "navigation": {
+      "label": "Navigation principale"
+    }
+  }
+}
