@@ -3,7 +3,7 @@
 <ul>
   {%- for item in collections.all | changelang(page.url, locale) -%}
     <li>
-      <a href="{{ item.url }}" lang="{{ item.targetLocale }}" hreflang="{{ item.targetLocale }}"{% if item.isActive %} aria-current="true"{% endif %}>
+      <a{% if item.isActive %} aria-current="true"{% else %} href="{{ item.url }}" hreflang="{{ item.targetLocale }}" lang="{{ item.targetLocale }}"{% endif %}>
         {{ item.label | capitalize }}
       </a>
     </li>
