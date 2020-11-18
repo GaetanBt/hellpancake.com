@@ -1,6 +1,11 @@
 <header role="banner">
   <div class="container">
-    {%- include "components/navigation.njk" -%}
-    {%- include "components/changelang.njk" -%}
+    <div class="Header-top flex">
+      {%- include "components/skiplinks.njk" -%}
+      {%- include "components/changelang.njk" -%}
+    </div>
+    <div class="Header-body">
+      {%- include "components/navigation.njk" -%}
+    </div>
   </div>
 </header>

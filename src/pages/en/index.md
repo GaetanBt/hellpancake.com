@@ -4,7 +4,7 @@ meta:
 eleventyNavigation:
   key: Home
   isHomePage: true
-  title: <span class="text-stack">Hell</span> Pancake<span class="sr-only">, go to homepage</span>
+  title: <span class="text-stack">Hell</span> <span class="text-primary">Pancake</span><span class="sr-only">, go to homepage</span>
   titleAttr: Hell Pancake, go to homepage
   order: 1
 translationKey: Page-home

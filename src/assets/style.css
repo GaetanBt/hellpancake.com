@@ -37,6 +37,10 @@
   /* Typography */
   --line-height: 1.5;
 
+  /* Nav links */
+  --nav-links-padding: 1rem;
+  --nav-links-size: 1.25em;
+
   /* Icons */
   /* External icon by Luc Poupard → https://thenounproject.com/icon/13883/ */
   --external: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M91.875 62H85v23H15V15h23V0H0v100h100V62z'/%3E%3Cpath d='M54 0v.627l17.787 17.85L52.701 38H38v24h24V49.799l20.773-20.337L99.374 46H100V0z'/%3E%3C/svg%3E");
@@ -159,7 +163,15 @@ h1::after{
 [role="banner"] {
   background-color: var(--blueish-bg);
   margin-bottom: 7rem;
-  padding: 2rem 0;
+}
+
+.Header-top {
+  --nav-links-padding: .75rem;
+  --nav-links-size: .9rem;
+}
+
+.Header-body {
+  padding: 1rem 0;
 }
 
 
@@ -182,39 +194,28 @@ h1::after{
  * Navigation
  */
 
-[role="navigation"] {
-  --nav-links-padding: 1rem;
-  margin: 0 calc(-1 * var(--nav-links-padding));
-}
-
-.Nav {
-  width: 100%;
-}
-
-.Nav-item--home {
-  flex-grow: 1;
-}
-
-.Nav-item:not(.Nav-item--home) {
-  grid-row: 2;
-}
-
-.Nav-link {
+[role="navigation"] a {
   display: inline-block;
-  font-size: 1.25em;
+  font-size: var(--nav-links-size);
   padding: var(--nav-links-padding);
   text-decoration-thickness: 2px;
 }
 
-.Nav-link:not([aria-current]) {
-  text-decoration: none;
+[role="navigation"] a[aria-current] {
+  color: var(--text-color);
 }
 
-.Nav-item--home .Nav-link {
-  font-size: 1.5em;
+[role="navigation"] a.brand {
+  --nav-links-size: 1.5rem;
   letter-spacing: -1px;
-  text-decoration: none;
   text-transform: uppercase;
+}
+
+.Header-top,
+.Header-body {
+  --x-offset: calc(-1 * var(--nav-links-padding));
+  margin-left: var(--x-offset);
+  margin-right: var(--x-offset);
 }
 
 
@@ -442,6 +443,10 @@ blockquote footer::before {
   display: flex !important;
 }
 
+.flex-grow-1 {
+  flex-grow: 1 !important;
+}
+
 .flex-wrap {
   flex-wrap: wrap !important;
 }
@@ -463,6 +468,7 @@ blockquote footer::before {
 }
 
 
+
 /**
  * Hiding
  */
@@ -470,6 +476,7 @@ blockquote footer::before {
 [hidden] {
   display: none !important;
 }
+
 
 
 /**
@@ -495,7 +502,7 @@ blockquote footer::before {
     margin-bottom: 3rem;
   }
 
-  .Nav-item--home {
+  .Header-body .flex-grow-1 {
     flex-basis: 100%;
     text-align: center;
   }

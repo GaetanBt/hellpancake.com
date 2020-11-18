@@ -5,6 +5,10 @@
     },
     "navigation": {
       "label": "Main navigation"
+    },
+    "skiplinks": {
+      "label": "Skip links",
+      "content": "Go to content"
     }
   },
   "fr": {
@@ -13,6 +17,10 @@
     },
     "navigation": {
       "label": "Navigation principale"
+    },
+    "skiplinks": {
+      "label": "Liens d'évitement",
+      "content": "Aller au contenu"
     }
   }
 }
