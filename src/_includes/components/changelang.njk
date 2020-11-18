@@ -1,7 +1,7 @@
 {%- import "components/ui.njk" as ui with context -%}
 
 <nav role="navigation" aria-label="{{ "changelang.label" | translate }}">
-  <ul>
+  <ul class="list-reset flex">
     {%- for item in collections.all | changelang(page.url, locale) -%}
       <li>
         <a{% if item.isActive %} aria-current="true"{% else %} href="{{ item.url }}" hreflang="{{ item.targetLocale }}" lang="{{ item.targetLocale }}"{% endif %}>
