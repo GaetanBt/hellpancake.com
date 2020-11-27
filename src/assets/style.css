@@ -32,7 +32,8 @@
   --text-color: #444;
   --text-muted: #767676;
   --grey-bg: #f6f6f6;
-  --blueish-bg: #eeeefe;
+  --blueish-bg: hsl(240, 89%, 96%); /* #eeeefe*/
+  --blueish-dark-bg: hsl(240, 89%, 91%); /* #eeeefe*/
 
   /* Typography */
   --base-font-size: 1.125rem;
@@ -253,8 +254,20 @@ h4 {
  */
 
 code,
-pre {
+.Code-language,
+.Code-example {
   background-color: var(--blueish-bg); /* #e1e1eb */
+}
+
+.Code-example {
+  border-radius: 0 10px 10px 10px;
+  padding: 1.5rem;
+}
+
+.Code-language {
+  border-bottom: 2px solid var(--blueish-dark-bg);
+  display: inline-block;
+  padding: .75rem;
 }
 
 code {
@@ -263,8 +276,6 @@ code {
 }
 
 pre {
-  border-radius: 10px;
-  padding: 1.5rem;
   overflow-x: scroll;
 }
 
@@ -513,6 +524,15 @@ blockquote footer::before {
 
 .mt-0 {
   margin-top: 0 !important;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.my-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .m-0 {

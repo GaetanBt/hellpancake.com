@@ -145,6 +145,23 @@ module.exports = function (eleventyConfig) {
 
 
   /**
+   * Shortcodes
+   */
+
+  eleventyConfig.addPairedShortcode("code", function (content, language) {
+    return `
+      <div class="Code m-0">
+        <div class="Code-language text-bold">${language}</div>
+        <div class="Code-example">
+          <pre class="my-0"><code>${content}</code></pre>
+        </div>
+      </div>
+    `
+  });
+
+
+
+  /**
    * Output configuration
    */
 
