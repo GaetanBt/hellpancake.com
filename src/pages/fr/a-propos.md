@@ -7,10 +7,21 @@ eleventyNavigation:
 translationKey: Page-about
 ---
 
-<img src="/assets/images/honk.jpg" class="Avatar" alt="Angry clown with ginger hair avatar" width="120" height="120">
+<img src="/assets/images/honk.jpg" class="Avatar" alt="Avatar, clown roux en colère." width="120" height="120">
 
 # À propos
 
-I'm a french UI developer that loves accessibility and lives in Angers.
 
-I don't know if this is going to be more than a landing page someday so you can follow me on <a href="https://twitter.com/GaetanBt">Twitter</a> if you'd like.
+## À propos de moi
+
+Je suis un intégrateur web qui aime l'accessibilité numérique et vit à Angers.
+
+Vous pouvez me retrouver sur [Twitter](https://twitter.com/GaetanBt) si vous le souhaitez.
+
+
+## À propos de ce site
+
+Ce site est construit grâce au Générateur de Site Statique [<span lang="en">Eleventy</span>](https://11ty.io) et est hébergé sur [GitHub Pages](https://pages.github.com). Tout ce que vous retrouverez ici est transparent, <i lang="en">open source</i> et le code source est disponible sur [GitHub](https://github.com/GaetanBt/hellpancake.com/).
+**Aucune donnée personnelle n'est collectée** d'une quelconque manière via ce site, et votre vie privée est respectée.
+
+N'hésitez pas à [ouvrir une issue](https://github.com/GaetanBt/hellpancake.com/issues/new/) si vous avez des difficultés à naviguer sur ce site ou si vous avez une question.

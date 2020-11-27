@@ -118,6 +118,7 @@ a[href^="http"]::after {
   display: inline-block;
   height: .75em;
   margin-left: .5ch;
+  margin-right: .25ch;
   mask: var(--external) no-repeat 50% 50%;
   width: .75em;
 }
