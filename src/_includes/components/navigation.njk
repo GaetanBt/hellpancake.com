@@ -3,15 +3,15 @@
 <nav role="navigation" aria-label="{{ "navigation.label" | translate }}">
   <ul class="flex flex-wrap justify-content-center list-reset">
     {%- for entry in collections[locale] | eleventyNavigation -%}
-      {% if entry.isHomePage == true %}
+      {%- if entry.isHomePage == true -%}
         <li class="flex-grow-1">
           {{ ui.navLink(entry, "brand") }}
         </li>
-      {% else %}
+      {%- else -%}
         <li>
           {{ ui.navLink(entry) }}
         </li>
-      {% endif %}
+      {%- endif -%}
     {%- endfor -%}
   </ul>
 </nav>
