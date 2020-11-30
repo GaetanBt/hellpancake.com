@@ -49,6 +49,14 @@ module.exports = function (eleventyConfig) {
     })
   })
 
+  eleventyConfig.addCollection('posts_en', function (collectionApi) {
+    return collectionApi.getFilteredByGlob('src/pages/en/posts/**/*.md')
+  })
+
+  eleventyConfig.addCollection('posts_fr', function (collectionApi) {
+    return collectionApi.getFilteredByGlob('src/pages/fr/articles/**/*.md')
+  })
+
 
 
   /**
@@ -142,6 +150,22 @@ module.exports = function (eleventyConfig) {
     return translation
   })
 
+  eleventyConfig.addFilter('localizeDate', function (date = null) {
+    const locale = this.ctx.locale
+
+    if (date === null) {
+      throw new Error('[localizedDate]: no date provided')
+    }
+
+    const options = {
+      day: '2-digit',
+      month: 'long',
+      year: 'numeric'
+    }
+
+    return new Intl.DateTimeFormat(locale, options).format(date)
+  })
+
 
 
   /**
@@ -166,6 +190,9 @@ module.exports = function (eleventyConfig) {
    */
 
   return {
+    markdownTemplateEngine: 'njk',
+    htmlTemplateEngine: 'njk',
+
     dir: {
       input: 'src'
     }
