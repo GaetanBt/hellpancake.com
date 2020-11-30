@@ -1,0 +1,26 @@
+{% extends "../layouts/base.njk" %}
+
+{%- block content -%}
+  {{ content | safe }}
+
+  <ol class="list-reset">
+  {%- for post in collections["posts_" + locale] | reverse -%}
+    <li>
+      <article class="Post{{ " mb-0" if loop.last }}">
+        <h2 class="mb-0">
+          <a class="Post-title" href="{{ post.url }}">{{ post.data.meta.title }}</a>
+        </h2>
+        <small class="text-muted">
+          <time datetime="{{ post.date.toISOString() }}" class="Post-date has-icon-before">{{ post.date | localizeDate }}</time>
+          {%- if post.data.tags -%}
+            <span class="Post-tags has-icon-before">{{ post.data.tags | join(", ") }}</span>
+          {%- endif -%}
+        </small>
+        {%- if post.data.excerpt -%}
+          <p>{{ post.data.excerpt | safe }}</p>
+        {%- endif -%}
+      </article>
+    </li>
+  {%- endfor -%}
+  </ol>
+{%- endblock -%}
