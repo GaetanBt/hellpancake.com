@@ -22,7 +22,9 @@ module.exports = function (eleventyConfig) {
    * Assets
    */
 
-  eleventyConfig.addPassthroughCopy('src/assets/**/*.!(css)')
+  eleventyConfig
+    .addPassthroughCopy('src/assets/**/*.!(css)')
+    .addPassthroughCopy('src/*.!(json)')
 
 
 
