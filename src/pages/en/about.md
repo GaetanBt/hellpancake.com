@@ -21,10 +21,10 @@ You can follow me on [Twitter](https://twitter.com/{{ social.twitter.account }})
 
 ## About this website
 
-This website is built using the [Eleventy](https://11ty.io) Static Site Generator and hosted on [GitHub Pages](https://pages.github.com). Everything on here is transparent, open source and the source code is available on [GitHub](https://github.com/GaetanBt/hellpancake.com/).
+This website is built using the [Eleventy](https://11ty.io) Static Site Generator and hosted on [GitHub Pages](https://pages.github.com). Everything on here is transparent, open source and the source code is available on [GitHub]({{ pkg.bugs.url | replace("issues", "") }}).
 **No personal data is collected** in any way through this site, and your privacy is respected.
 
-Don't hesitate to [open an issue](https://github.com/GaetanBt/hellpancake.com/issues/new/) if you have any problem browsing this website or any question.
+Don't hesitate to [open an issue]({{ pkg.bugs.url }}) if you have any problem browsing this website or any question.
 
 
 ## Accessibility
