@@ -21,10 +21,10 @@ Vous pouvez me retrouver sur [Twitter](https://twitter.com/GaetanBt) si vous le 
 
 ## À propos de ce site
 
-Ce site est construit grâce au Générateur de Site Statique [<span lang="en">Eleventy</span>](https://11ty.io) et est hébergé sur [GitHub Pages](https://pages.github.com). Tout ce que vous retrouverez ici est transparent, <i lang="en">open source</i> et le code source est disponible sur [GitHub](https://github.com/GaetanBt/hellpancake.com/).
+Ce site est construit grâce au Générateur de Site Statique [<span lang="en">Eleventy</span>](https://11ty.io) et est hébergé sur [GitHub Pages](https://pages.github.com). Tout ce que vous retrouverez ici est transparent, <i lang="en">open source</i> et le code source est disponible sur [GitHub]({{ pkg.bugs.url | replace("issues", "") }}).
 **Aucune donnée personnelle n'est collectée** d'une quelconque manière via ce site, et votre vie privée est respectée.
 
-N'hésitez pas à [ouvrir une issue](https://github.com/GaetanBt/hellpancake.com/issues/new/) si vous avez des difficultés à naviguer sur ce site ou si vous avez une question.
+N'hésitez pas à [ouvrir une issue]({{ pkg.bugs.url }}) si vous avez des difficultés à naviguer sur ce site ou si vous avez une question.
 
 
 ## Accessibilité
