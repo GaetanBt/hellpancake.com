@@ -25,3 +25,8 @@ Ce site est construit grâce au Générateur de Site Statique [<span lang="en">E
 **Aucune donnée personnelle n'est collectée** d'une quelconque manière via ce site, et votre vie privée est respectée.
 
 N'hésitez pas à [ouvrir une issue](https://github.com/GaetanBt/hellpancake.com/issues/new/) si vous avez des difficultés à naviguer sur ce site ou si vous avez une question.
+
+
+## Accessibilité
+
+Ce site est construit avec l'accessibilité comme **valeur fondamentale**. Je fais tout mon possible pour n'en exclure personne et respecter les standards <abbr lang="en" title="Web Content Accessibility Guidelines">WCAG</abbr>. 

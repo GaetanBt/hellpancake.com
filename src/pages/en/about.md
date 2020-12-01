@@ -25,3 +25,8 @@ This website is built using the [Eleventy](https://11ty.io) Static Site Generato
 **No personal data is collected** in any way through this site, and your privacy is respected.
 
 Don't hesitate to [open an issue](https://github.com/GaetanBt/hellpancake.com/issues/new/) if you have any problem browsing this website or any question.
+
+
+## Accessibility
+
+This website is built with accessibility as its **core value**. I try my best to not exclude anybody from here and to respect the <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Standard.
