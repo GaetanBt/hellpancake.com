@@ -1,8 +1,8 @@
 {
   "name": "hellpancake.com",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "My own personal website",
+  "private": true,
   "scripts": {
     "clean": "del-cli _site",
     "build:eleventy": "eleventy",
@@ -16,13 +16,11 @@
     "type": "git",
     "url": "git+https://github.com/GaetanBt/hellpancake.com.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/GaetanBt/hellpancake.com/issues"
   },
-  "homepage": "https://github.com/GaetanBt/hellpancake.com#readme",
+  "homepage": "https://hellpancake.com",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
     "@11ty/eleventy-navigation": "^0.1.6",
