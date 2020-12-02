@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>{{ meta.title }} | {{ site.title }}</title>
+    {%- if meta.description -%}
+      <meta name="description" content="{{ meta.description }}">
+    {%- endif -%}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/assets/{{ manifest["style.css"] }}">
   </head>
