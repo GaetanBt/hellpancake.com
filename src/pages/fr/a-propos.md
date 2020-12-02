@@ -29,4 +29,11 @@ N'hésitez pas à [ouvrir une issue]({{ pkg.bugs.url }}) si vous avez des diffic
 
 ## Accessibilité
 
-Ce site est construit avec l'accessibilité comme **valeur fondamentale**. Je fais tout mon possible pour n'en exclure personne et respecter les standards <abbr lang="en" title="Web Content Accessibility Guidelines">WCAG</abbr>. 
+Ce site est construit avec l'accessibilité comme **valeur fondamentale**. Je fais tout mon possible pour n'en exclure personne et respecter les standards <abbr lang="en" title="Web Content Accessibility Guidelines">WCAG</abbr>.
+
+
+## Propriété intellectuelle
+
+Sauf mention contraire explicite, tout contenu publié sur ce site est disponible selon les termes de la Licence <span lang="en">Creative Commons</span> Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International (CC BY-NC-SA 4.0).
+
+Vous trouverez plus de détails concernant ce que vous êtes autorisé·e à faire et ce que vous n'avez pas le droit de faire [sur le site de Creative Commons](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr).

@@ -30,3 +30,10 @@ Don't hesitate to [open an issue]({{ pkg.bugs.url }}) if you have any problem br
 ## Accessibility
 
 This website is built with accessibility as its **core value**. I try my best to not exclude anybody from here and to respect the <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Standard.
+
+
+## Intellectual property
+
+Unless explicitly stated otherwise, all content published on this site is available under the terms of the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0).
+
+You can find more details about what you are allowed to do and what you are not allowed to do [on the Creative Commons site](https://creativecommons.org/licenses/by-nc-sa/4.0/deed).
