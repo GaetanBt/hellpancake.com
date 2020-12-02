@@ -1,0 +1,18 @@
+{% extends "../layouts/base.njk" %}
+
+{%- block content -%}
+  {{ content | safe }}
+
+  {%- for entry in collections[locale] | eleventyNavigation -%}
+    <h2 class="mb-0">
+      <a href="{{ entry.url }}">{{ entry.key if entry.isHomePage else entry.title }}</a>
+    </h2>
+    {%- if entry.children | length > 0 -%}
+      <ul>
+        {%- for child in entry.children -%}
+          <li><a href="{{ child.url }}">{{ child.title }}</a></li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endblock -%}

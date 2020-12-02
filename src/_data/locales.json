@@ -3,6 +3,12 @@
     "changelang": {
       "label": "Switch lang"
     },
+    "footer": {
+      "sitemap": {
+        "label": "Sitemap",
+        "path": "sitemap"
+      }
+    },
     "navigation": {
       "label": "Main navigation"
     },
@@ -14,6 +20,12 @@
   "fr": {
     "changelang": {
       "label": "Changement de langue"
+    },
+    "footer": {
+      "sitemap": {
+        "label": "Plan de site",
+        "path": "plan-de-site"
+      }
     },
     "navigation": {
       "label": "Navigation principale"

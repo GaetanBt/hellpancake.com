@@ -1,3 +1,7 @@
+{%- import "components/ui.njk" as ui -%}
 <footer class="text-center text-bold" role="contentinfo">
-  © {{ site.domain }} - 2020
+  © 2020 {{ site.domain }} - {{ ui.navLink({
+    title: "footer.sitemap.label" | translate,
+    url: "footer.sitemap.path" | translate | prefixWithBaseUrl
+  }) }}
 </footer>
