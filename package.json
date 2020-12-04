@@ -24,6 +24,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
     "@11ty/eleventy-navigation": "^0.1.6",
+    "@11ty/eleventy-plugin-rss": "^1.0.9",
     "autoprefixer": "^10.0.2",
     "cssnano": "^4.1.10",
     "del-cli": "^3.0.1",

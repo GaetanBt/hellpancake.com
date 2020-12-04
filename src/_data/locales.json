@@ -12,6 +12,10 @@
     "navigation": {
       "label": "Main navigation"
     },
+    "feed": {
+      "title": "Hell Pancake english posts",
+      "subtitle": "The latest english posts from hellpancake.com"
+    },
     "skiplinks": {
       "label": "Skip links",
       "content": "Go to content"
@@ -29,6 +33,10 @@
     },
     "navigation": {
       "label": "Navigation principale"
+    },
+    "feed": {
+      "title": "Les articles français de Hell Pancake",
+      "subtitle": "Les derniers articles français publiés sur hellpancake.com"
     },
     "skiplinks": {
       "label": "Liens d'évitement",
