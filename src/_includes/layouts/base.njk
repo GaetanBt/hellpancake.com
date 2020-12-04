@@ -8,6 +8,7 @@
     {%- endif -%}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/assets/{{ manifest["style.css"] }}">
+    <link rel="alternate" type="application/atom+xml" title="{{ "feed.title" | translate }} (Atom)" href="/{{ locale | getFeedPermalink }}">
   </head>
   <body>
     {%- include "components/header.njk" -%}

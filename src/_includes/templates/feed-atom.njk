@@ -1,0 +1,33 @@
+{%- set collection = collections["posts_" + locale] -%}
+<?xml version="1.0" encoding="utf-8"?>
+<feed xml:lang="{{ locale }}" xmlns="http://www.w3.org/2005/Atom">
+  <id>{{ site.url }}</id>
+  <title>{{ "feed.title" | translate }}</title>
+  <subtitle>{{ "feed.subtitle" | translate }}</subtitle>
+  <updated>{{ collection | rssLastUpdatedDate }}</updated>
+  <link href="{{ site.url + locale | getFeedPermalink }}" rel="self" />
+  <link href="{{ site.url }}" />
+  <author>
+    <name>{{ site.author.name }}</name>
+    <uri>{{ site.url }}</uri>
+  </author>
+{%- for post in collection %}
+  {%- set absolutePostUrl -%}{{ post.url | url | absoluteUrl(site.url) }}{%- endset %}
+  {% set postDate = post.date.toISOString() %}
+  <entry>
+    <id>{{ absolutePostUrl }}</id>
+    <title>{{ post.data.meta.title }}</title>
+    <published>{{ postDate }}</published>
+    <updated>{{ post.data.lastUpdated | lastUpdatedFeedDate if post.data.lastUpdated else postDate }}</updated>
+    {%- if post.data.excerpt %}
+    <summary type="html">{{ post.data.excerpt }}</summary>
+    {%- endif %}
+    <link href="{{ absolutePostUrl }}" />
+    {%- if post.data.author.name != site.author.name %}
+      <author>
+        <name>{{ post.data.author.name }}</name>
+      </author>
+    {%- endif %}
+  </entry>
+{%- endfor %}
+</feed>

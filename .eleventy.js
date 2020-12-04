@@ -1,4 +1,5 @@
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation')
+const eleventyRssPlugin = require('@11ty/eleventy-plugin-rss')
 
 const site = require('./src/_data/site')
 const config = require('./src/_data/config')
@@ -34,6 +35,7 @@ module.exports = function (eleventyConfig) {
    */
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin)
+  eleventyConfig.addPlugin(eleventyRssPlugin)
 
 
 
@@ -97,6 +99,10 @@ module.exports = function (eleventyConfig) {
     return path
       .filter(pathFragment => !excludeFromPath.includes(pathFragment))
       .join('/') + '/index.html'
+  })
+
+  eleventyConfig.addFilter('getFeedPermalink', function (locale) {
+    return `feed-${locale}.xml`
   })
 
   eleventyConfig.addFilter('changelang', function (pages, currentUrl, currentLocale) {
@@ -177,6 +183,10 @@ module.exports = function (eleventyConfig) {
     }
 
     return new Intl.DateTimeFormat(locale, options).format(date)
+  })
+
+  eleventyConfig.addFilter('lastUpdatedFeedDate', function (str) {
+    return new Date(str).toISOString()
   })
 
 

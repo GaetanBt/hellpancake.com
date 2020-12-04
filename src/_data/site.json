@@ -1,7 +1,10 @@
 {
   "title": "Hell Pancake",
   "domain": "hellpancake.com",
-  "url": "https://hellpancake.com",
+  "url": "https://hellpancake.com/",
+  "author": {
+    "name": "Gaëtan"
+  },
   "locales": {
     "en": {
       "code": "en",
