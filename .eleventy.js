@@ -25,7 +25,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig
     .addPassthroughCopy('src/assets/**/*.!(css)')
-    .addPassthroughCopy('src/*.!(json)')
+    .addPassthroughCopy({ 'src/root': '/' })
 
 
 
@@ -193,6 +193,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter('toISOString', function (date) {
     return date.toISOString()
+  })
+
+  eleventyConfig.addFilter('removeTimeFromISOString', function (ISOString) {
+    return ISOString.split('T')[0]
   })
 
   eleventyConfig.addFilter('getLastUpdatedDate', function (collection) {
