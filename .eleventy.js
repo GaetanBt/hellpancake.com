@@ -1,5 +1,4 @@
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation')
-const eleventyRssPlugin = require('@11ty/eleventy-plugin-rss')
 
 const site = require('./src/_data/site')
 const config = require('./src/_data/config')
@@ -35,7 +34,6 @@ module.exports = function (eleventyConfig) {
    */
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin)
-  eleventyConfig.addPlugin(eleventyRssPlugin)
 
 
 
@@ -85,6 +83,10 @@ module.exports = function (eleventyConfig) {
   /**
    * Filters
    */
+
+  eleventyConfig.addFilter('absoluteUrl', function (path) {
+    return new URL(path, site.url)
+  })
 
   eleventyConfig.addFilter('pagePermalink', function (page) {
     const path = page.filePathStem.split('/')
@@ -185,8 +187,33 @@ module.exports = function (eleventyConfig) {
     return new Intl.DateTimeFormat(locale, options).format(date)
   })
 
-  eleventyConfig.addFilter('lastUpdatedFeedDate', function (str) {
-    return new Date(str).toISOString()
+  eleventyConfig.addFilter('createDateObj', function (str) {
+    return new Date(str)
+  })
+
+  eleventyConfig.addFilter('toISOString', function (date) {
+    return date.toISOString()
+  })
+
+  eleventyConfig.addFilter('getLastUpdatedDate', function (collection) {
+    const dates = []
+
+    collection.forEach(item => {
+      let created = item.date
+      let lastUpdated = item.data.lastUpdated
+
+      dates.push(created)
+
+      if (lastUpdated) {
+        if (typeof lastUpdated === 'string') {
+          lastUpdated = new Date(lastUpdated)
+        }
+
+        dates.push(lastUpdated)
+      }
+    })
+
+    return new Date(Math.max(...dates)).toISOString()
   })
 
 

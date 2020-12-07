@@ -4,7 +4,7 @@
   <id>{{ site.url }}</id>
   <title>{{ "feed.title" | translate }}</title>
   <subtitle>{{ "feed.subtitle" | translate }}</subtitle>
-  <updated>{{ collection | rssLastUpdatedDate }}</updated>
+  <updated>{{ collection | getLastUpdatedDate }}</updated>
   <link href="{{ site.url + locale | getFeedPermalink }}" rel="self" />
   <link href="{{ site.url }}" />
   <author>
@@ -12,17 +12,16 @@
     <uri>{{ site.url }}</uri>
   </author>
 {%- for post in collection %}
-  {%- set absolutePostUrl -%}{{ post.url | url | absoluteUrl(site.url) }}{%- endset %}
-  {% set postDate = post.date.toISOString() %}
+  {%- set postDate = post.date.toISOString() %}
   <entry>
-    <id>{{ absolutePostUrl }}</id>
+    <id>{{ post.url | absoluteUrl }}</id>
     <title>{{ post.data.meta.title }}</title>
     <published>{{ postDate }}</published>
-    <updated>{{ post.data.lastUpdated | lastUpdatedFeedDate if post.data.lastUpdated else postDate }}</updated>
+    <updated>{{ post.data.lastUpdated | createDateObj | toISOString if post.data.lastUpdated else postDate }}</updated>
     {%- if post.data.excerpt %}
     <summary type="html">{{ post.data.excerpt }}</summary>
     {%- endif %}
-    <link href="{{ absolutePostUrl }}" />
+    <link href="{{ post.url | absoluteUrl }}" />
     {%- if post.data.author.name != site.author.name %}
       <author>
         <name>{{ post.data.author.name }}</name>
