@@ -4,6 +4,7 @@
   {{ content | safe }}
 
   {%- for entry in collections[locale] | eleventyNavigation -%}
+  {%- if entry.display != false -%}
     <h2 class="mb-0">
       <a href="{{ entry.url }}">{{ entry.key if entry.isHomePage else entry.title }}</a>
     </h2>
@@ -14,5 +15,6 @@
         {%- endfor -%}
       </ul>
     {%- endif -%}
+  {%- endif -%}
   {%- endfor -%}
 {%- endblock -%}
