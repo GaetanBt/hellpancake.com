@@ -1,5 +1,10 @@
 {
   "en": {
+    "404": {
+      "title": "Page not found",
+      "heading": "Sorry, the page you are looking for does not exist.",
+      "content": "You can <a href=\"[[token]]\">go back to the homepage</a>."
+    },
     "changelang": {
       "label": "Switch lang"
     },
@@ -22,6 +27,11 @@
     }
   },
   "fr": {
+    "404": {
+      "title": "Page non trouvée",
+      "heading": "Désolé, la page que vous cherchez n'existe pas.",
+      "content": "Vous pouvez <a href=\"[[token]]\">retourner à l'accueil</a>."
+    },
     "changelang": {
       "label": "Changement de langue"
     },

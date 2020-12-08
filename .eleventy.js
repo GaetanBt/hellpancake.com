@@ -2,7 +2,7 @@ const eleventyNavigationPlugin = require('@11ty/eleventy-navigation')
 
 const site = require('./src/_data/site')
 const config = require('./src/_data/config')
-const locales = require('./src/_data/locales')
+const helpers = require('./src/_data/helpers')
 
 module.exports = function (eleventyConfig) {
 
@@ -63,24 +63,6 @@ module.exports = function (eleventyConfig) {
 
 
   /**
-   * Helpers
-   */
-
-  function getDefaultLocale () {
-    for (const [key, value] of Object.entries(site.locales)) {
-      if (value.default === true) {
-        return key
-      }
-    }
-  }
-
-  function getAvailableLocales () {
-    return Object.keys(site.locales)
-  }
-
-
-
-  /**
    * Filters
    */
 
@@ -90,7 +72,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter('pagePermalink', function (page) {
     const path = page.filePathStem.split('/')
-    const defaultLocale = getDefaultLocale()
+    const defaultLocale = helpers.getDefaultLocale()
     const excludeFromPath = ['pages', defaultLocale]
 
     // Index pages should not be included in a `index` folder but at the root of the lang folder
@@ -111,13 +93,13 @@ module.exports = function (eleventyConfig) {
     const currentTranslationKey = this.ctx.translationKey
     const changelang = []
 
-    getAvailableLocales().forEach(availableLocale => {
+    helpers.getAvailableLocales().forEach(availableLocale => {
       const {
         code,
         displayName
       } = site.locales[availableLocale]
 
-      let url = code === getDefaultLocale() ? '/' : `/${code}`
+      let url = code === helpers.getDefaultLocale() ? '/' : `/${code}`
 
       if (currentTranslationKey) {
         for (let page of pages) {
@@ -142,10 +124,10 @@ module.exports = function (eleventyConfig) {
     return changelang
   })
 
-  eleventyConfig.addFilter('prefixWithBaseUrl', function (str) {
-    const currentLocale = this.ctx.locale
+  eleventyConfig.addFilter('prefixWithBaseUrl', function (str, targetLocale = null) {
+    const currentLocale = targetLocale || this.ctx.locale
 
-    if (config.excludeDefaultLocaleFromUrl === true && getDefaultLocale() === currentLocale) {
+    if (config.excludeDefaultLocaleFromUrl === true && helpers.getDefaultLocale() === currentLocale) {
       return `/${str}`
     }
 
@@ -153,22 +135,8 @@ module.exports = function (eleventyConfig) {
   })
 
   /* @see https://stackoverflow.com/questions/6393943/convert-javascript-string-in-dot-notation-into-an-object-reference#answer-6394168 */
-  eleventyConfig.addFilter('translate', function (key) {
-    const locale = this.ctx.locale
-
-    if (!locales.hasOwnProperty(locale)) {
-      throw new Error(`[translate]: Translation's locale \`${locale}\` does not exist`)
-    }
-
-    key = `${locale}.${key}`
-
-    const translation = key.split('.').reduce((acc, i) => acc[i], locales)
-
-    if (typeof translation === 'undefined') {
-      throw new Error(`[translate]: No translation found for key \`${key}\``)
-    }
-
-    return translation
+  eleventyConfig.addFilter('translate', function (key, token = null) {
+    return helpers.translate(key, this.ctx.locale, token)
   })
 
   eleventyConfig.addFilter('localizeDate', function (date = null) {
