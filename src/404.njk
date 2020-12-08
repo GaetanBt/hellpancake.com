@@ -1,0 +1,9 @@
+<h1>{{ "404.title" | translate }}</h1>
+
+{% for l in helpers.getAvailableLocales() %}
+  {%- set homepageUrl = "" | prefixWithBaseUrl(l) -%}
+  <article{% if l !== locale %} lang="{{ l }}"{% endif %}>
+    <h2>{{ helpers.translate("404.heading", l) }}</h2>
+    <p>{{ helpers.translate("404.content", l, homepageUrl) | safe }}</p>
+  </article>
+{% endfor %}

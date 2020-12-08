@@ -6,6 +6,9 @@
     {%- if meta.description -%}
       <meta name="description" content="{{ meta.description }}">
     {%- endif -%}
+    {%- if meta.robots -%}
+      <meta name="robots" content="{{ meta.robots.index }},{{ meta.robots.follow }}">
+    {%- endif -%}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/assets/{{ manifest["style.css"] }}">
     <link rel="alternate" type="application/atom+xml" title="{{ "feed.title" | translate }} (Atom)" href="/{{ locale | getFeedPermalink }}">
