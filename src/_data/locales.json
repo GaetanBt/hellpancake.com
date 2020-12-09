@@ -21,6 +21,11 @@
       "title": "Hell Pancake english posts",
       "subtitle": "The latest english posts from hellpancake.com"
     },
+    "post": {
+      "author": "author",
+      "publishedDate": "Published on",
+      "lastUpdated": "Last updated on"
+    },
     "skiplinks": {
       "label": "Skip links",
       "content": "Go to content"
@@ -47,6 +52,11 @@
     "feed": {
       "title": "Les articles français de Hell Pancake",
       "subtitle": "Les derniers articles français publiés sur hellpancake.com"
+    },
+    "post": {
+      "author": "auteur",
+      "publishedDate": "Publié le",
+      "lastUpdated": "Modifié le"
     },
     "skiplinks": {
       "label": "Liens d'évitement",

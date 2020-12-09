@@ -205,6 +205,20 @@ module.exports = function (eleventyConfig) {
     `
   });
 
+  eleventyConfig.addPairedShortcode("note", function (content, type = 'info', htmlClass = '') {
+    const classes = ['Note', `Note--${type}`]
+
+    if (htmlClass !== '') {
+      classes.push(htmlClass)
+    }
+
+    return `
+      <div class="${classes.join(' ')}">
+        ${content}
+      </div>
+    `
+  });
+
 
 
   /**

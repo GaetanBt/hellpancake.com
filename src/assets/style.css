@@ -443,6 +443,30 @@ blockquote footer::before {
   margin-left: 1.5ch;
 }
 
+.Post-infos {
+  --flow-space: 3rem;
+}
+
+
+
+/**
+ * Note
+ */
+
+.Note {
+  padding: 1.5rem;
+}
+
+.Note--info {
+  background-color: var(--blueish-bg);
+}
+
+.Note ul {
+  margin: 0;
+  padding-left: 0;
+  list-style-position: inside;
+}
+
 
 
 /* --------------------------------------------------------------------------------
