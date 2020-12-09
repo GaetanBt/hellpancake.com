@@ -1,0 +1,15 @@
+{% extends "../layouts/base.njk" %}
+
+{% block content %}
+  {{ content | safe }}
+
+  {%- note "info", "Post-infos" -%}
+    <ul class="m-0">
+      <li><strong>{{ "post.publishedDate" | translate }} :</strong> <time datetime="{{ date | createDateObj | toISOString }}">{{ date | createDateObj | localizeDate }}</time></li>
+      {%- if lastUpdated -%}
+      <li><strong>{{ "post.lastUpdated" | translate }} :</strong> <time datetime="{{ lastUpdated | createDateObj | toISOString }}">{{ lastUpdated | createDateObj | localizeDate }}</time></li>
+      {%- endif -%}
+      <li><strong>{{ "post.author" | translate | capitalize }} :</strong> {{ author.name }}</li>
+    </ul>
+  {%- endnote -%}
+{% endblock %}

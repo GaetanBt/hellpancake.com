@@ -1,6 +1,7 @@
 const site = require('../../../_data/site.json')
 
 module.exports = {
+  layout: 'templates/post',
   eleventyComputed: {
     author: data => data.author || site.author,
     eleventyNavigation: {
