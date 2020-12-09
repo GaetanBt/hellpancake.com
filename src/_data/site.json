@@ -3,7 +3,10 @@
   "domain": "hellpancake.com",
   "url": "https://hellpancake.com/",
   "author": {
-    "name": "Gaëtan"
+    "name": "Gaëtan",
+    "links": {
+      "twitter": "GaetanBt"
+    }
   },
   "locales": {
     "en": {

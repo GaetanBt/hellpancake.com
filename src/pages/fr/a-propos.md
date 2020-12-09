@@ -16,7 +16,7 @@ translationKey: Page-about
 
 Je suis un intégrateur web qui aime l'accessibilité numérique et vit à Angers.
 
-Vous pouvez me retrouver sur [Twitter](https://twitter.com/GaetanBt) si vous le souhaitez.
+Vous pouvez me retrouver sur [Twitter](https://twitter.com/{{ site.author.links.twitter }}) si vous le souhaitez.
 
 
 ## À propos de ce site
