@@ -99,26 +99,36 @@ module.exports = function (eleventyConfig) {
         displayName
       } = site.locales[availableLocale]
 
+      const isActive = currentLocale === code
       let url = code === helpers.getDefaultLocale() ? '/' : `/${code}`
+      const data = {}
 
       if (currentTranslationKey) {
         for (let page of pages) {
           if (currentTranslationKey === page.data.translationKey && code === page.data.locale) {
             url = page.url
+
+            if (!isActive) {
+              data.titleAttr = helpers.translate('changelang.pageAvailableIn', code)
+            }
           }
         }
       } else {
         if (currentLocale === code) {
           url = currentUrl
         }
+
+        if (!isActive) {
+          data.titleAttr = helpers.translate('changelang.pageNotAvailableIn', code)
+        }
       }
 
-      changelang.push({
-        url: url,
-        label: displayName,
-        isActive: currentLocale === code,
-        targetLocale: code
-      })
+      data.url = url
+      data.label = displayName
+      data.isActive = isActive
+      data.targetLocale = code
+
+      changelang.push(data)
     })
 
     return changelang

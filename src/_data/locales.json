@@ -6,7 +6,9 @@
       "content": "You can <a href=\"[[token]]\">go back to the homepage</a>."
     },
     "changelang": {
-      "label": "Switch lang"
+      "label": "Switch lang",
+      "pageAvailableIn": "This page is also available in English",
+      "pageNotAvailableIn": "This page is not available in English, you will be redirected to the home page"
     },
     "footer": {
       "sitemap": {
@@ -38,7 +40,9 @@
       "content": "Vous pouvez <a href=\"[[token]]\">retourner à l'accueil</a>."
     },
     "changelang": {
-      "label": "Changement de langue"
+      "label": "Changement de langue",
+      "pageAvailableIn": "Cette page est également disponible en Français",
+      "pageNotAvailableIn": "Cette page n'est pas disponible en Français, vous serez redirigé vers l'accueil"
     },
     "footer": {
       "sitemap": {
