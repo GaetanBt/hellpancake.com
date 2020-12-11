@@ -3,18 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title>{{ meta.title }} | {{ site.title }}</title>
-    {%- if meta.description -%}
+    {%- if meta.description %}
       <meta name="description" content="{{ meta.description }}">
-    {%- endif -%}
-    {%- if meta.robots -%}
+    {%- endif %}
+    {%- if meta.robots %}
       <meta name="robots" content="{{ meta.robots.index }},{{ meta.robots.follow }}">
-    {%- endif -%}
+    {%- endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/assets/{{ manifest["style.css"] }}">
     <link rel="alternate" type="application/atom+xml" title="{{ "feed.title" | translate }} (Atom)" href="/{{ locale | getFeedPermalink }}">
     {%- if config.environment == "production" %}
       <script async defer data-domain="{{ site.domain }}" src="https://plausible.{{ site.domain }}/js/index.js"></script>
     {%- endif %}
+    <meta property="og:url" content="{{ page.url | absoluteUrl }}">
+    <meta property="og:title" content="{{ meta.title }}">
+    <meta property="og:type" content="{{ opengraph.type }}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:locale" content="{{ locale }}">
+    {%- if opengraph.type == "article" %}
+      <meta property="article:author" content="{{ author.name }}">
+    {%- endif %}
+    {%- if meta.decription or excerpt %}
+      <meta property="og:description" content="{{ meta.description | safe if meta.description else excerpt | safe }}">
+      <meta name="twitter:description" content="{{ meta.description | safe if meta.description else excerpt | safe }}">
+    {%- endif %}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ meta.title }}">
+    <meta name="twitter:url" content="{{ page.url | absoluteUrl }}">
+    <meta name="twitter:site" content="@{{ author.links.twitter }}">
   </head>
   <body>
     {%- include "components/header.njk" -%}

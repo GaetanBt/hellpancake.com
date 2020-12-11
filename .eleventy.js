@@ -10,6 +10,7 @@ module.exports = function (eleventyConfig) {
    */
 
   eleventyConfig.setQuietMode()
+  eleventyConfig.setDataDeepMerge(true)
 
   // Because we no longer parse these files with 11ty, it cannot refresh the browser on changes
   eleventyConfig.setBrowserSyncConfig({
