@@ -4,7 +4,7 @@
   <ul class="list-reset flex">
     {%- for item in collections.all | changelang(page.url, locale) -%}
       <li>
-        <a{% if item.isActive %} aria-current="true"{% else %} href="{{ item.url }}" hreflang="{{ item.targetLocale }}" lang="{{ item.targetLocale }}"{% endif %}>
+        <a{% if item.isActive %} aria-current="true"{% else %} href="{{ item.url }}" hreflang="{{ item.targetLocale }}" lang="{{ item.targetLocale }}"{% endif %}{% if item.titleAttr %} title="{{ item.titleAttr }}"{% endif %}>
           {{ item.label | capitalize }}
         </a>
       </li>
