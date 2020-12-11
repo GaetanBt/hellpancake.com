@@ -1,7 +1,6 @@
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation')
 
 const site = require('./src/_data/site')
-const config = require('./src/_data/config')
 const helpers = require('./src/_data/helpers')
 
 module.exports = function (eleventyConfig) {
@@ -99,9 +98,9 @@ module.exports = function (eleventyConfig) {
         displayName
       } = site.locales[availableLocale]
 
-      const isActive = currentLocale === code
-      let url = code === helpers.getDefaultLocale() ? '/' : `/${code}`
       const data = {}
+      const isActive = currentLocale === code
+      let url = helpers.prefixWithBaseUrl('', code)
 
       if (currentTranslationKey) {
         for (let page of pages) {
@@ -136,12 +135,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter('prefixWithBaseUrl', function (str, targetLocale = null) {
     const currentLocale = targetLocale || this.ctx.locale
-
-    if (config.excludeDefaultLocaleFromUrl === true && helpers.getDefaultLocale() === currentLocale) {
-      return `/${str}`
-    }
-
-    return `/${currentLocale}/${str}`
+    return helpers.prefixWithBaseUrl(str, currentLocale)
   })
 
   /* @see https://stackoverflow.com/questions/6393943/convert-javascript-string-in-dot-notation-into-an-object-reference#answer-6394168 */

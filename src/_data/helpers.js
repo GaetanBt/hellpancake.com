@@ -1,4 +1,5 @@
 const site = require('./site')
+const config = require('./config')
 const locales = require('./locales')
 
 module.exports = {
@@ -32,5 +33,12 @@ module.exports = {
     }
 
     return translation
+  },
+  prefixWithBaseUrl: function (str, targetLocale) {
+    if (config.excludeDefaultLocaleFromUrl === true && this.getDefaultLocale() === targetLocale) {
+      return `/${str}`
+    }
+
+    return `/${targetLocale}/${str}`
   }
 }
