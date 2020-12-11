@@ -63,6 +63,10 @@
   --base-font-size: 1.125rem;
   --line-height: 1.5;
 
+  /* Outline */
+  --outline-width: 3px;
+  --outline-offset: 2px;
+
   /* Nav links */
   --nav-links-padding: 1rem;
   --nav-links-size: 1.25em;
@@ -115,8 +119,8 @@ body {
 
 
 :focus {
-  outline: 3px solid currentColor;
-  outline-offset: 2px;
+  outline: var(--outline-width) solid currentColor;
+  outline-offset: var(--outline-offset);
 }
 
 img[alt] {
@@ -242,6 +246,7 @@ small {
 .Header-top {
   --nav-links-padding: .75rem;
   --nav-links-size: .9rem;
+  --outline-offset: calc(-1 * var(--outline-width));
 }
 
 .Header-body {
