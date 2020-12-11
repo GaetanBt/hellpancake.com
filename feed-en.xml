@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xml:lang="en" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://hellpancake.com/</id>
+  <title>Hell Pancake english posts</title>
+  <subtitle>The latest english posts from hellpancake.com</subtitle>
+  <updated>2020-12-11T00:00:00.000Z</updated>
+  <link href="https://hellpancake.com/feed-en.xml" rel="self" />
+  <link href="https://hellpancake.com/" />
+  <author>
+    <name>Gaëtan</name>
+    <uri>https://hellpancake.com/</uri>
+  </author>
+  <entry>
+    <id>https://hellpancake.com/posts/finally-a-website/</id>
+    <title>Finally a website!</title>
+    <published>2020-12-11T00:00:00.000Z</published>
+    <updated>2020-12-11T00:00:00.000Z</updated>
+    <summary type="html">I finally stuck to one of my New Year resolutions! Yeah, it must be one from 2015 but it still counts, right?</summary>
+    <link href="https://hellpancake.com/posts/finally-a-website/" />
+  </entry>
+</feed>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xml:lang="fr" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://hellpancake.com/</id>
+  <title>Les articles français de Hell Pancake</title>
+  <subtitle>Les derniers articles français publiés sur hellpancake.com</subtitle>
+  <updated>2020-12-11T00:00:00.000Z</updated>
+  <link href="https://hellpancake.com/feed-fr.xml" rel="self" />
+  <link href="https://hellpancake.com/" />
+  <author>
+    <name>Gaëtan</name>
+    <uri>https://hellpancake.com/</uri>
+  </author>
+  <entry>
+    <id>https://hellpancake.com/fr/articles/enfin-un-site-perso/</id>
+    <title>Enfin un site perso !</title>
+    <published>2020-12-11T00:00:00.000Z</published>
+    <updated>2020-12-11T00:00:00.000Z</updated>
+    <summary type="html">J&#39;ai enfin tenu une de mes bonnes résolutions ! Bon d&#39;accord, elle doit dater de 2015 mais ça compte quand même non ?</summary>
+    <link href="https://hellpancake.com/fr/articles/enfin-un-site-perso/" />
+  </entry>
+</feed>
