@@ -72,6 +72,13 @@
   --nav-links-padding: 1rem;
   --nav-links-size: 1.25em;
 
+  /* Syntax highlighting */
+  --code-example-bg: #2d2d2d;
+  --code-example-text: #ccc;
+  --code-example-active-line-bg: #404040;
+  --code-example-added-line-bg: #2e402f;
+  --code-example-removed-line-bg: #602c2c;
+
   /* Icons */
   /* Date icon by Guru → https://thenounproject.com/icon/1146232/ */
   --date: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 66 68'%3E%3Cpath d='M53.67 6.35h-2.59V4.81a4 4 0 1 0-8 0v1.54H22.92V4.81a4 4 0 1 0-8 0v1.54h-2.59c-6.627 0-12 5.373-12 12v36.84c0 6.627 5.373 12 12 12h41.34c6.627 0 12-5.373 12-12V18.35c0-6.627-5.373-12-12-12zm-41.33 8h2.59v3.54a4 4 0 1 0 8 0v-3.54h20.15v3.54a4 4 0 1 0 8 0v-3.54h2.59a4 4 0 0 1 4 4v8.1H8.33v-8.1a4 4 0 0 1 4-4h.01zm41.33 44.84H12.33a4 4 0 0 1-4-4V34.45h49.34v20.74a4 4 0 0 1-4 4z'/%3E%3C/svg%3E");
@@ -311,9 +318,9 @@ code {
 }
 
 .Code-language {
-  background-color: #2d2d2d;
+  background-color: var(--code-example-bg);
   border-radius: .3em .3em 0 0;
-  color: #ccc;
+  color: var(--code-example-text);
   display: inline-block;
   padding: .75rem;
 }
@@ -324,6 +331,7 @@ code {
   margin-bottom: 0 !important;
 }
 
+/* @start Eleventy doc copy/paste */
 .highlight-line {
   display: inline-block;
 
@@ -343,27 +351,45 @@ code {
 .highlight-line .highlight-line:not(:last-child) {
   min-width: 0;
 }
+/* @end Eleventy doc copy/paste */
 
-/*
- * Dark theme
- */
-
-.highlight-line-isdir {
-  color: #b0b0b0;
-  background-color: #222;
-}
-
+/* Theme */
 .highlight-line-active {
-  background-color: #444;
-  background-color: hsla(0, 0%, 27%, .8);
+  background-color: var(--code-example-active-line-bg);
 }
 
 .highlight-line-add {
-  background-color: #45844b;
+  --sign-color: var(--code-example-added-line-bg);
+  background-color: var(--code-example-added-line-bg);
 }
 
 .highlight-line-remove {
-  background-color: #902f2f;
+  --sign-color: var(--code-example-removed-line-bg);
+  background-color: var(--code-example-removed-line-bg);
+}
+
+.highlight-line-add::before,
+.highlight-line-remove::before {
+  --size: 1em;
+  background: #fff;
+  border-radius: 50%;
+  color: var(--sign-color);
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1;
+  height: var(--size);
+  margin-left: calc(-1 * var(--size) / 2);
+  margin-right: calc(-1 * var(--size) / 2);
+  text-align: center;
+  width: var(--size);
+}
+
+.highlight-line-add::before {
+  content: "+" !important; /* !important needed to override Eleventy's copy/pasted empty lines style */
+}
+
+.highlight-line-remove::before {
+  content: "-" !important;  /* !important needed to override Eleventy's copy/pasted empty lines style */
 }
 
 
