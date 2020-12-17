@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "vendors/prism/prism-tomorrow.css";
 
 /* --------------------------------------------------------------------------------
    Fonts
@@ -70,6 +71,13 @@
   /* Nav links */
   --nav-links-padding: 1rem;
   --nav-links-size: 1.25em;
+
+  /* Syntax highlighting */
+  --code-example-bg: #2d2d2d;
+  --code-example-text: #ccc;
+  --code-example-active-line-bg: #404040;
+  --code-example-added-line-bg: #2e402f;
+  --code-example-removed-line-bg: #602c2c;
 
   /* Icons */
   /* Date icon by Guru → https://thenounproject.com/icon/1146232/ */
@@ -303,35 +311,85 @@ small {
  * Code examples
  */
 
-code,
-.Code-language,
-.Code-example {
-  background-color: var(--blueish-bg); /* #e1e1eb */
-}
-
-.Code-example {
-  border-radius: 0 10px 10px 10px;
-  padding: 1.5rem;
-}
-
-.Code-language {
-  border-bottom: 2px solid var(--blueish-dark-bg);
-  display: inline-block;
-  padding: .75rem;
-}
-
 code {
+  background-color: var(--blueish-bg); /* #e1e1eb */
   border-radius: 3px;
   padding: .25em;
 }
 
-pre {
-  overflow-x: scroll;
+.Code-language {
+  background-color: var(--code-example-bg);
+  border-radius: .3em .3em 0 0;
+  color: var(--code-example-text);
+  display: inline-block;
+  padding: .75rem;
 }
 
-pre code {
-  font-size: inherit;
-  padding: 0;
+.Code-example > pre {
+  border-radius: 0 .3em .3em .3em;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* @start Eleventy doc copy/paste */
+.highlight-line {
+  display: inline-block;
+
+  /* del, ins, mark default styles */
+  text-decoration: none;
+  color: inherit;
+}
+
+/* allow highlighting empty lines */
+.highlight-line:empty:before {
+  content: " ";
+}
+
+.highlight-line:not(:last-child) {
+  min-width: 100%;
+}
+.highlight-line .highlight-line:not(:last-child) {
+  min-width: 0;
+}
+/* @end Eleventy doc copy/paste */
+
+/* Theme */
+.highlight-line-active {
+  background-color: var(--code-example-active-line-bg);
+}
+
+.highlight-line-add {
+  --sign-color: var(--code-example-added-line-bg);
+  background-color: var(--code-example-added-line-bg);
+}
+
+.highlight-line-remove {
+  --sign-color: var(--code-example-removed-line-bg);
+  background-color: var(--code-example-removed-line-bg);
+}
+
+.highlight-line-add::before,
+.highlight-line-remove::before {
+  --size: 1em;
+  background: #fff;
+  border-radius: 50%;
+  color: var(--sign-color);
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1;
+  height: var(--size);
+  margin-left: calc(-1 * var(--size) / 2);
+  margin-right: calc(-1 * var(--size) / 2);
+  text-align: center;
+  width: var(--size);
+}
+
+.highlight-line-add::before {
+  content: "+" !important; /* !important needed to override Eleventy's copy/pasted empty lines style */
+}
+
+.highlight-line-remove::before {
+  content: "-" !important;  /* !important needed to override Eleventy's copy/pasted empty lines style */
 }
 
 
