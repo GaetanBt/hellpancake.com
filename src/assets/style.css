@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "vendors/prism/prism-tomorrow.css";
 
 /* --------------------------------------------------------------------------------
    Fonts
@@ -303,35 +304,66 @@ small {
  * Code examples
  */
 
-code,
-.Code-language,
-.Code-example {
-  background-color: var(--blueish-bg); /* #e1e1eb */
-}
-
-.Code-example {
-  border-radius: 0 10px 10px 10px;
-  padding: 1.5rem;
-}
-
-.Code-language {
-  border-bottom: 2px solid var(--blueish-dark-bg);
-  display: inline-block;
-  padding: .75rem;
-}
-
 code {
+  background-color: var(--blueish-bg); /* #e1e1eb */
   border-radius: 3px;
   padding: .25em;
 }
 
-pre {
-  overflow-x: scroll;
+.Code-language {
+  background-color: #2d2d2d;
+  border-radius: .3em .3em 0 0;
+  color: #ccc;
+  display: inline-block;
+  padding: .75rem;
 }
 
-pre code {
-  font-size: inherit;
-  padding: 0;
+.Code-example > pre {
+  border-radius: 0 .3em .3em .3em;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.highlight-line {
+  display: inline-block;
+
+  /* del, ins, mark default styles */
+  text-decoration: none;
+  color: inherit;
+}
+
+/* allow highlighting empty lines */
+.highlight-line:empty:before {
+  content: " ";
+}
+
+.highlight-line:not(:last-child) {
+  min-width: 100%;
+}
+.highlight-line .highlight-line:not(:last-child) {
+  min-width: 0;
+}
+
+/*
+ * Dark theme
+ */
+
+.highlight-line-isdir {
+  color: #b0b0b0;
+  background-color: #222;
+}
+
+.highlight-line-active {
+  background-color: #444;
+  background-color: hsla(0, 0%, 27%, .8);
+}
+
+.highlight-line-add {
+  background-color: #45844b;
+}
+
+.highlight-line-remove {
+  background-color: #902f2f;
 }
 
 

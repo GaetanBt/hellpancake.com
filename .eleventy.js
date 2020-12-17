@@ -1,4 +1,5 @@
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation')
+const eleventySyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 
 const site = require('./src/_data/site')
 const helpers = require('./src/_data/helpers')
@@ -34,6 +35,7 @@ module.exports = function (eleventyConfig) {
    */
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin)
+  eleventyConfig.addPlugin(eleventySyntaxHighlight)
 
 
 
@@ -199,15 +201,23 @@ module.exports = function (eleventyConfig) {
    * Shortcodes
    */
 
-  eleventyConfig.addPairedShortcode("code", function (content, language) {
+  eleventyConfig.addPairedShortcode("code", function (content, params) {
+    const languageKey = params.split(' ')[0]
+
+    const displayName = {
+      css: 'CSS',
+      html: 'HTML',
+      js: 'JavaScript'
+    }
+
     return `
-      <div class="Code m-0">
-        <div class="Code-language text-bold">${language}</div>
+      <div class="Code">
+        <div class="Code-language text-bold">${displayName[languageKey] || languageKey}</div>
         <div class="Code-example">
-          <pre class="my-0"><code>${content}</code></pre>
+          ${eleventyConfig.nunjucksPairedShortcodes.highlight(content, params)}
         </div>
       </div>
-    `
+    `.trim()
   });
 
   eleventyConfig.addPairedShortcode("note", function (content, type = 'info', htmlClass = '') {
