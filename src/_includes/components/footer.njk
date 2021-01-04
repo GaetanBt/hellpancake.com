@@ -1,6 +1,6 @@
 {%- import "components/ui.njk" as ui -%}
 <footer class="text-center text-bold" role="contentinfo">
-  © 2020 {{ site.domain }} - {{ ui.navLink({
+  © 2020 - {{ helpers.getCurrentYear() }} {{ site.domain }} - {{ ui.navLink({
     title: "footer.sitemap.label" | translate,
     url: "footer.sitemap.path" | translate | prefixWithBaseUrl
   }) }}

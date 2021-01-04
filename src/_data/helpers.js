@@ -13,6 +13,9 @@ module.exports = {
   getAvailableLocales: function () {
     return Object.keys(site.locales)
   },
+  getCurrentYear: function () {
+    return new Date().getFullYear()
+  },
   translate: function (key, targetedLocale, token = null) {
     const locale = targetedLocale
 
