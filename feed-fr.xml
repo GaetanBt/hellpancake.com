@@ -3,7 +3,7 @@
   <id>https://hellpancake.com/</id>
   <title>Les articles français de Hell Pancake</title>
   <subtitle>Les derniers articles français publiés sur hellpancake.com</subtitle>
-  <updated>2020-12-11T00:00:00.000Z</updated>
+  <updated>2021-08-07T00:00:00.000Z</updated>
   <link href="https://hellpancake.com/feed-fr.xml" rel="self" />
   <link href="https://hellpancake.com/" />
   <author>
@@ -17,5 +17,13 @@
     <updated>2020-12-11T00:00:00.000Z</updated>
     <summary type="html">J&#39;ai enfin tenu une de mes bonnes résolutions ! Bon d&#39;accord, elle doit dater de 2015 mais ça compte quand même non ?</summary>
     <link href="https://hellpancake.com/fr/articles/enfin-un-site-perso/" />
+  </entry>
+  <entry>
+    <id>https://hellpancake.com/fr/articles/avec-un-trema-sil-vous-plait/</id>
+    <title>Avec un tréma s&#39;il vous plait</title>
+    <published>2021-08-07T00:00:00.000Z</published>
+    <updated>2021-08-07T00:00:00.000Z</updated>
+    <summary type="html">Florilège de différentes orthographes de mon prénom glanées çà et là.</summary>
+    <link href="https://hellpancake.com/fr/articles/avec-un-trema-sil-vous-plait/" />
   </entry>
 </feed>
