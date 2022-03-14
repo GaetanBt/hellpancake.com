@@ -2,6 +2,7 @@
 meta:
   title: Avec un tréma s'il vous plait
 date: "2021-08-07"
+lastUpdated: "2022-03-14"
 excerpt: Florilège de différentes orthographes de mon prénom glanées çà et là.
 ---
 
@@ -38,5 +39,7 @@ Alors là, je vous avoue que je reste pantois.
 - Ga??tan
 - Gatan
 - GaÎtan
+- Gaùtan
+- Ga½tan
 
 Celles-là j'ai eu l'occasion de les voir dans différentes interfaces web, <i lang="en">emails</i>, courriers ou étiquettes de colis. Elles me font rire mais j'ai mal à ma [qualité web](https://checklists.opquast.com/fr/assurance-qualite-web/le-codage-de-caracteres-utilise-est-utf-8).
