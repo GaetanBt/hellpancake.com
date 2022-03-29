@@ -34,7 +34,7 @@
     "cssnano": "^4.1.10",
     "del-cli": "^3.0.1",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.2.10",
+    "postcss": "^8.2.13",
     "postcss-cli": "^8.2.0",
     "postcss-hash": "^2.0.0",
     "postcss-import": "^14.0.0"
