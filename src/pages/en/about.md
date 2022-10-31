@@ -16,7 +16,7 @@ translationKey: Page-about
 
 I'm a french UI developer that loves accessibility and lives in Angers, France.
 
-You can follow me on [Twitter](https://twitter.com/{{ site.author.links.twitter }}) if you'd like.
+You can follow me on [Twitter](https://twitter.com/{{ site.author.links.twitter }}) or [Mastodon]({{ site.author.links.mastodon }}) if you'd like.
 
 
 ## About this website
