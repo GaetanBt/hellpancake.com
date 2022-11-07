@@ -398,11 +398,14 @@ code {
  * Table
  */
 
+.table-responsive {
+  overflow-x: auto;
+}
+
 table {
   border-collapse: collapse;
   border: 1px solid var(--primary);
   border-radius: 3px;
-  table-layout: fixed;
   width: 100%;
 }
 
@@ -412,6 +415,15 @@ table > caption {
 
 thead {
   border-bottom: 2px solid var(--primary);
+}
+
+tbody tr:not(:last-child) {
+  border-bottom: 1px solid #888;
+}
+
+tbody tr:hover,
+tbody tr:focus-within {
+  background-color: rgba(0, 0, 0, .05);
 }
 
 th,
