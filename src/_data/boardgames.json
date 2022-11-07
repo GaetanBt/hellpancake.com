@@ -1,0 +1,214 @@
+[
+  {
+    "name": "Apocalypse au zoo de Carson City",
+    "players": "2-4",
+    "price": 6,
+    "link": {
+      "label": "Philibert",
+      "href" : "https://www.philibertnet.com/fr/opla/54298-apocalypse-au-zoo-de-carson-city-3760032260779.html"
+    }
+  },
+  {
+    "name": "Cerbère",
+    "players": "3-6",
+    "price": 22,
+    "link": {
+      "label": "Philibert",
+      "href" : "https://www.philibertnet.com/fr/la-boite-de-jeu/68519-cerbere-3770004610341.html"
+    }
+  },
+  {
+    "name": "Cerbère - Les Trésors de l’Enfer",
+    "players": "3-6",
+    "comment": "Extension du jeu de base, jamais jouée.",
+    "price": 10,
+    "link": {
+      "label": "Philibert",
+      "href" : "https://www.philibertnet.com/fr/la-boite-de-jeu/90589-cerbere-les-tresors-de-l-enfer-3770004610631.html"
+    }
+  },
+  {
+    "name": "Clank!",
+    "players": "2-4",
+    "price": 37,
+    "link": {
+      "label": "Philibert",
+      "href" : "https://www.philibertnet.com/fr/renegade-game-studios/52852-clank-vf-3760243850066.html"
+    }
+  },
+  {
+    "name": "Clinic",
+    "players": "1-4",
+    "price": 43,
+    "comment": "L'insert cartonné dans lequel la boite est en place est éraflé. Je l'ai reçu comme ça. Le reste est impeccable.",
+    "link": {
+      "label": "Philibert",
+      "href" : "https://www.philibertnet.com/fr/avstudiogames/76409-clinic-653341427168.html"
+    }
+  },
+  {
+    "name": "Clinic : The Extension 4",
+    "players": "1-4",
+    "comment": "Extension du jeu de base.",
+    "price": 15,
+    "link": {
+      "label": "Philibert",
+      "href" : "https://www.philibertnet.com/fr/avstudiogames/90491-clinic-the-extension-4-2100000712335.html"
+    }
+  },
+  {
+    "name": "Codex Naturalis",
+    "players": "1-4",
+    "price": 9,
+    "link": {
+      "label": "Philibert",
+      "href" : "https://www.philibertnet.com/fr/bombyx/91125-codex-naturalis-3760267990519.html"
+    }
+  },
+  {
+    "name": "Dans les cordes",
+    "players": "2",
+    "price": 10,
+    "link": {
+      "label": "Philibert",
+      "href" : "https://www.philibertnet.com/fr/chevre-edition/75971-dans-les-cordes-012868562590.html"
+    }
+  },
+  {
+    "name": "Explorateurs de la Mer du Nord : Écueils de la Perdition",
+    "players": "",
+    "comment": "Extension du jeu de base Explorateurs de la Mer du Nord. Jamais joué, erreur de commande.",
+    "price": 20,
+    "link": {
+      "label": "Philibert",
+      "href" : "https://www.philibertnet.com/fr/pixie-games/63158-explorateurs-de-la-mer-du-nord-extension-ecueils-de-la-perdition-797776527274.html"
+    }
+  },
+  {
+    "name": "Fiesta De Los Muertos",
+    "players": "4-8",
+    "comment": "Une ardoise est abimée, le revêtement se décolle. Je l'ai reçu comme ça.",
+    "price": 11,
+    "link": {
+      "label": "Philibert",
+      "href" : "https://www.philibertnet.com/fr/oldchap-editions/81529-fiesta-de-los-muertos-3760032260120.html"
+    }
+  },
+  {
+    "name": "Les Tavernes de la Vallée Profonde",
+    "players": "2-4",
+    "price": 30,
+    "link": {
+      "label": "Philibert",
+      "href" : "https://www.philibertnet.com/fr/schmidt-spiele/78489-les-tavernes-de-la-vallee-profonde-4001504882549.html"
+    }
+  },
+  {
+    "name": "Mafia de Cuba",
+    "players": "6-10+",
+    "price": 14,
+    "comment": "Jamais joué.",
+    "link": {
+      "label": "Philibert",
+      "href" : "https://www.philibertnet.com/fr/lui-meme/36443-mafia-de-cuba-3558380028857.html"
+    }
+  },
+  {
+    "name": "Maquis",
+    "players": "1",
+    "price": 20,
+    "comment": "Vente indissociable de l'extension.",
+    "link": {
+      "label": "Philibert",
+      "href" : "https://www.philibertnet.com/fr/boom-boom-games/109991-maquis-3770010422211.html"
+    }
+  },
+  {
+    "name": "Maquis - extension",
+    "players": "1",
+    "comment": "Vente indissociable du jeu de base.",
+    "price": 5,
+    "link": {
+      "label": "Philibert",
+      "href": "https://www.philibertnet.com/fr/boom-boom-games/110208-maquis-extension-3770010422228.html"
+    }
+  },
+  {
+    "name": "Mysterium",
+    "players": "2-7",
+    "price": 25,
+    "link": {
+      "label": "Philibert",
+      "href" : "https://www.philibertnet.com/fr/libellud/35693-mysterium-3558380029441.html"
+    }
+  },
+  {
+    "name": "On Mars",
+    "players": "1-4",
+    "price": 100,
+    "comment": "Jamais joué.",
+    "link": {
+      "label": "Philibert",
+      "href" : "https://www.philibertnet.com/fr/eagle-gryphon-games/76158-on-mars-736640880039.html"
+    }
+  },
+  {
+    "name": "Pandemic",
+    "players": "2-4",
+    "price": 20,
+    "link": {
+      "label": "Philibert",
+      "href" : "https://www.philibertnet.com/fr/zman-games/23050-pandemie-8435407620155.html"
+    }
+  },
+  {
+    "name": "Soviet Kitchen",
+    "players": "1-6",
+    "price": 10,
+    "comment": "Se joue avec une application mobile gratuite. Peu de parties, les cartes ne sont pas protégées.",
+    "link": {
+      "label": "Philibert",
+      "href" : "https://www.philibertnet.com/fr/igiari/83120-soviet-kitchen-second-service-3558380070689.html"
+    }
+  },
+  {
+    "name": "The Mind",
+    "players": "2-4",
+    "price": 4,
+    "comment": "Les cartes ne sont pas protégées.",
+    "link": {
+      "label": "Philibert",
+      "href" : "https://www.philibertnet.com/fr/oya/62873-the-mind-3760207030329.html"
+    }
+  },
+  {
+    "name": "Under Falling Skies",
+    "players": "1",
+    "price": 20,
+    "comment": "Quasi neuf, aucun scénario n'a été déballé.",
+    "link": {
+      "label": "Philibert",
+      "href" : "https://www.philibertnet.com/fr/iello/94028-under-falling-skies-3760175518546.html"
+    }
+  },
+  {
+    "name": "X-ODUS: L'éveil de la corruption",
+    "players": "1-4",
+    "price": 35,
+    "comment": "Jeu non dépunché, non déballé et jamais joué.",
+    "link": {
+      "label": "Kickstarter (en anglais)",
+      "href" : "https://www.kickstarter.com/projects/boredgameink/x-odus-rise-of-the-corruption"
+    }
+  },
+  {
+    "name": "Zombicide Saison 1 Réédition V2 Kickstarter complet",
+    "players": "1-6",
+    "comment": "Juste déballé, aucune partie jouée. Réédition de la première saison de Zombicide <strong>en anglais</strong>. Pack Présidentiel (incluant la boite Washington ZC et les figurines présidentielles) avec les options suivantes : Campagne Fort Hendrix, pack d'abomination légendes urbaines, figurine Danny Trejo et le kit de mise à jour des cartes compagnons et zombies.",
+    "price": 350,
+    "link": {
+      "label": "Kickstarter (en anglais)",
+      "href" : "https://www.kickstarter.com/projects/cmon/zombicide-2nd-edition"
+    }
+  }
+]
