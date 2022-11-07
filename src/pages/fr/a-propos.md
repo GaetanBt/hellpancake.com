@@ -14,7 +14,7 @@ translationKey: Page-about
 
 ## À propos de moi
 
-Je suis un intégrateur web qui aime l'accessibilité numérique et vit à Angers.
+Consultant en accessibilité numérique, intégrateur web et guitariste à mes heures perdues. Je vis à Angers.
 
 Vous pouvez me retrouver sur [Twitter](https://twitter.com/{{ site.author.links.twitter }}) ou [Mastodon]({{ site.author.links.mastodon }}) si vous le souhaitez.
 

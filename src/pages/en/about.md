@@ -14,7 +14,7 @@ translationKey: Page-about
 
 ## About me
 
-I'm a french UI developer that loves accessibility and lives in Angers, France.
+Web accessibility consultant, UI developer and guitarist in my spare time. I live in Angers, France.
 
 You can follow me on [Twitter](https://twitter.com/{{ site.author.links.twitter }}) or [Mastodon]({{ site.author.links.mastodon }}) if you'd like.
 
