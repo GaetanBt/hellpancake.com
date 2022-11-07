@@ -3,7 +3,7 @@
   <id>https://hellpancake.com/</id>
   <title>Les articles français de Hell Pancake</title>
   <subtitle>Les derniers articles français publiés sur hellpancake.com</subtitle>
-  <updated>2022-03-14T00:00:00.000Z</updated>
+  <updated>2022-11-07T00:00:00.000Z</updated>
   <link href="https://hellpancake.com/feed-fr.xml" rel="self" />
   <link href="https://hellpancake.com/" />
   <author>
@@ -25,5 +25,13 @@
     <updated>2022-03-14T00:00:00.000Z</updated>
     <summary type="html">Florilège de différentes orthographes de mon prénom glanées çà et là.</summary>
     <link href="https://hellpancake.com/fr/articles/avec-un-trema-sil-vous-plait/" />
+  </entry>
+  <entry>
+    <id>https://hellpancake.com/fr/articles/a-vendre/</id>
+    <title>Je vends mes jeux de société</title>
+    <published>2022-11-07T00:00:00.000Z</published>
+    <updated>2022-11-07T00:00:00.000Z</updated>
+    <summary type="html">Je mets en vente quelques jeux de société pour faire un peu de place.</summary>
+    <link href="https://hellpancake.com/fr/articles/a-vendre/" />
   </entry>
 </feed>
