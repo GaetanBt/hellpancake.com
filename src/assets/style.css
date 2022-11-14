@@ -410,6 +410,7 @@ table {
 }
 
 table > caption {
+  font-weight: 700;
   padding: .5rem;
 }
 
