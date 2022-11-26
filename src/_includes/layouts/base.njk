@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/assets/{{ manifest["style.css"] }}">
     <link rel="alternate" type="application/atom+xml" title="{{ "feed.title" | translate }} (Atom)" href="/{{ locale | getFeedPermalink }}">
+    <link rel="me" href="{{ site.author.links.mastodon }}">
     {%- if config.environment == "production" %}
       <script async defer data-domain="{{ site.domain }}" src="https://plausible.{{ site.domain }}/js/index.js"></script>
     {%- endif %}
