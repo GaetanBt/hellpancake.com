@@ -85,15 +85,6 @@
     }
   },
   {
-    "name": "Les Tavernes de la Vallée Profonde",
-    "players": "2-4",
-    "price": 30,
-    "link": {
-      "label": "Philibert",
-      "href" : "https://www.philibertnet.com/fr/schmidt-spiele/78489-les-tavernes-de-la-vallee-profonde-4001504882549.html"
-    }
-  },
-  {
     "name": "Maquis",
     "players": "1",
     "price": 20,
