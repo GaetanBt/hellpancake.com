@@ -28,15 +28,6 @@
     }
   },
   {
-    "name": "Clank!",
-    "players": "2-4",
-    "price": 37,
-    "link": {
-      "label": "Philibert",
-      "href" : "https://www.philibertnet.com/fr/renegade-game-studios/52852-clank-vf-3760243850066.html"
-    }
-  },
-  {
     "name": "Clinic",
     "players": "1-4",
     "price": 43,
@@ -57,31 +48,12 @@
     }
   },
   {
-    "name": "Codex Naturalis",
-    "players": "1-4",
-    "price": 9,
-    "link": {
-      "label": "Philibert",
-      "href" : "https://www.philibertnet.com/fr/bombyx/91125-codex-naturalis-3760267990519.html"
-    }
-  },
-  {
     "name": "Dans les cordes",
     "players": "2",
     "price": 10,
     "link": {
       "label": "Philibert",
       "href" : "https://www.philibertnet.com/fr/chevre-edition/75971-dans-les-cordes-012868562590.html"
-    }
-  },
-  {
-    "name": "Fiesta De Los Muertos",
-    "players": "4-8",
-    "comment": "Une ardoise est abimée, le revêtement se décolle. Je l'ai reçu comme ça.",
-    "price": 11,
-    "link": {
-      "label": "Philibert",
-      "href" : "https://www.philibertnet.com/fr/oldchap-editions/81529-fiesta-de-los-muertos-3760032260120.html"
     }
   },
   {
@@ -124,15 +96,6 @@
     }
   },
   {
-    "name": "Pandemic",
-    "players": "2-4",
-    "price": 20,
-    "link": {
-      "label": "Philibert",
-      "href" : "https://www.philibertnet.com/fr/zman-games/23050-pandemie-8435407620155.html"
-    }
-  },
-  {
     "name": "Soviet Kitchen",
     "players": "1-6",
     "price": 10,
@@ -140,26 +103,6 @@
     "link": {
       "label": "Philibert",
       "href" : "https://www.philibertnet.com/fr/igiari/83120-soviet-kitchen-second-service-3558380070689.html"
-    }
-  },
-  {
-    "name": "The Mind",
-    "players": "2-4",
-    "price": 4,
-    "comment": "Les cartes ne sont pas protégées.",
-    "link": {
-      "label": "Philibert",
-      "href" : "https://www.philibertnet.com/fr/oya/62873-the-mind-3760207030329.html"
-    }
-  },
-  {
-    "name": "Under Falling Skies",
-    "players": "1",
-    "price": 20,
-    "comment": "Quasi neuf, aucun scénario n'a été déballé.",
-    "link": {
-      "label": "Philibert",
-      "href" : "https://www.philibertnet.com/fr/iello/94028-under-falling-skies-3760175518546.html"
     }
   },
   {
