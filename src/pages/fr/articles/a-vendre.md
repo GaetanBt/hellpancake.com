@@ -2,7 +2,7 @@
 meta:
   title: Je vends mes jeux de société
 date: "2022-11-07"
-lastUpdated: "2022-12-20"
+lastUpdated: "2023-01-09"
 excerpt: Je mets en vente quelques jeux de société pour faire un peu de place.
 ---
 

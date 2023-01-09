@@ -106,20 +106,10 @@
     }
   },
   {
-    "name": "X-ODUS: L'éveil de la corruption",
-    "players": "1-4",
-    "price": 35,
-    "comment": "Jeu non dépunché, non déballé et jamais joué.",
-    "link": {
-      "label": "Kickstarter (en anglais)",
-      "href" : "https://www.kickstarter.com/projects/boredgameink/x-odus-rise-of-the-corruption"
-    }
-  },
-  {
     "name": "Zombicide Saison 1 Réédition V2 Kickstarter complet",
     "players": "1-6",
-    "comment": "Juste déballé, aucune partie jouée. Réédition de la première saison de Zombicide <strong>en anglais</strong>. Pack Présidentiel (incluant la boite Washington ZC et les figurines présidentielles) avec les options suivantes : Campagne Fort Hendrix, pack d'abomination légendes urbaines, figurine Danny Trejo et le kit de mise à jour des cartes compagnons et zombies.",
-    "price": 350,
+    "comment": "Certaines boites déballées, aucune partie jouée. Réédition de la première saison de Zombicide <strong>en anglais</strong>. Pack Présidentiel (incluant la boite Washington ZC et les figurines présidentielles) avec les options suivantes : Campagne Fort Hendrix, pack d'abomination légendes urbaines, figurine Danny Trejo et le kit de mise à jour des cartes compagnons et zombies.",
+    "price": 450,
     "link": {
       "label": "Kickstarter (en anglais)",
       "href" : "https://www.kickstarter.com/projects/cmon/zombicide-2nd-edition"
