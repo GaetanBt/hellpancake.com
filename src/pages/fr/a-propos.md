@@ -16,7 +16,7 @@ translationKey: Page-about
 
 Consultant en accessibilité numérique, intégrateur web et guitariste à mes heures perdues. Je vis à Angers.
 
-Vous pouvez me retrouver sur [Twitter](https://twitter.com/{{ site.author.links.twitter }}) ou [Mastodon]({{ site.author.links.mastodon }}) si vous le souhaitez.
+Vous pouvez me retrouver sur [Twitter](https://twitter.com/{{ site.author.links.twitter }}), [Mastodon]({{ site.author.links.mastodon }}) ou [Bluesky](https://bsky.app/profile/{{ site.author.links.bluesky }}) si vous le souhaitez.
 
 
 ## À propos de ce site

@@ -16,7 +16,7 @@ translationKey: Page-about
 
 Web accessibility consultant, UI developer and guitarist in my spare time. I live in Angers, France.
 
-You can find me on [Twitter](https://twitter.com/{{ site.author.links.twitter }}) or [Mastodon]({{ site.author.links.mastodon }}) if you'd like.
+You can find me on [Twitter](https://twitter.com/{{ site.author.links.twitter }}), [Mastodon]({{ site.author.links.mastodon }}) or [Bluesky](https://bsky.app/profile/{{ site.author.links.bluesky }}) if you'd like.
 
 
 ## About this website
