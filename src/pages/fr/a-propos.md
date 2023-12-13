@@ -37,11 +37,3 @@ Ce site est construit avec l'accessibilité comme **valeur fondamentale**. Je fa
 Sauf mention contraire explicite, tout contenu publié sur ce site est disponible selon les termes de la Licence <span lang="en">Creative Commons</span> Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International (CC BY-NC-SA 4.0).
 
 Vous trouverez plus de détails concernant ce que vous êtes autorisé·e à faire et ce que vous n'avez pas le droit de faire [sur le site de Creative Commons](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr).
-
-
-## Service externe
-
-### Plausible
-
-Ce site utilise [Plausible](https://plausible.io/) a des fins de mesure d'audience uniquement. **Aucune donnée personnelle** n'est collectée, **aucun cookie** n'est mis en place sur votre navigateur : vous n'êtes pas tracé·e sur internet. Il s'agit d'un outil léger, <i lang="en">open source</i> hébergé en Europe, respectueux du <abbr title="Règlement Général sur la Protection des Données">RGPD</abbr> et de votre vie privée.
-<a href="https://plausible.io/privacy-focused-web-analytics/" hreflang="en">Plus de détails concernant leur démarche sur leur site (en anglais seulement)</a>.
