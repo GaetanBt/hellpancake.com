@@ -11,6 +11,11 @@ _site/
 /kirby
 /vendor
 
+# Plugins
+# ------------
+
+/site/plugins/kirby-twig
+
 # System files
 # ------------
 
