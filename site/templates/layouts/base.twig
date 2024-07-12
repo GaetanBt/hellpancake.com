@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+  <body>
+    {{ snippet('layout/header') }}
+    <main id="main-content" class="container flow" role="main">
+      {% block content %}{% endblock %}
+    </main>
+    {{ snippet('layout/footer') }}
+  </body>
+</html>
