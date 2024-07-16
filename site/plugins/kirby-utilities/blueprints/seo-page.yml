@@ -1,0 +1,17 @@
+label: SEO
+
+fields:
+  headLine:
+    label: Metadonnées de la page
+    type: headline
+  meta_title:
+    label: Titre
+    type: text
+    help: Laisser vide pour utiliser le nom de la page.
+    counter: true
+    placeholder: '{{ page.title }}'
+  meta_description:
+    label: Description
+    type: text
+    help: Laisser vide pour utiliser le début du contenu de la page s'il existe.
+    counter: true

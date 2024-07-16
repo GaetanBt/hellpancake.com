@@ -4,10 +4,16 @@ use \Kirby\Cms\App as Kirby;
 
 Kirby::plugin('GaetanBt/kirby-utilities', [
   'options' => [
-    'metaDescriptionLength' => 120,
+    'metaDescriptionFromExcerptLength' => 120,
     'metaTitleSeparator' => '|',
-    'metaTitleField' => 'meta_title',
-    'metaDescriptionField' => 'meta_description'
+  ],
+
+  'blueprints' => [
+    'ku/seo/page' => __DIR__ . '/blueprints/seo-page.yml'
+  ],
+
+  'snippets' => [
+    'ku/seo/head' => __DIR__ . '/snippets/seo.php'
   ],
 
   'pageMethods' => include_once __DIR__ . '/src/pageMethods.php',
