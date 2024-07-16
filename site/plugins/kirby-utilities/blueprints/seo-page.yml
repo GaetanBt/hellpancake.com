@@ -1,17 +1,33 @@
 label: SEO
 
-fields:
-  headLine:
-    label: Metadonnées de la page
-    type: headline
-  meta_title:
-    label: Titre
-    type: text
-    help: Laisser vide pour utiliser le nom de la page.
-    counter: true
-    placeholder: '{{ page.title }}'
-  meta_description:
-    label: Description
-    type: text
-    help: Laisser vide pour utiliser le début du contenu de la page s'il existe.
-    counter: true
+columns:
+  left:
+    width: 2/3
+    fields:
+      meta_headLine:
+        label: Metadonnées de la page
+        type: headline
+      meta_title:
+        label: Titre
+        type: text
+        help: Laisser vide pour utiliser le nom de la page.
+        counter: true
+        placeholder: '{{ page.title }}'
+      meta_description:
+        label: Description
+        type: text
+        help: Laisser vide pour utiliser le début du contenu de la page s'il existe.
+        counter: true
+  right:
+    width: 1/3
+    fields:
+      meta_configuration_headLine:
+        label: Configuration
+        type: headline
+      meta_robots_index:
+        label: Indexer la page ?
+        type: toggle
+        default: true
+        text:
+          - "Non"
+          - "Oui"

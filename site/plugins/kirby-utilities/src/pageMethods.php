@@ -36,5 +36,16 @@ return [
     }
 
     return $title;
+  },
+  'isIndexable' => function (): bool
+  {
+    $output = true;
+    $meta_robots_index_field = $this->content->get('meta_robots_index');
+
+    if ($meta_robots_index_field->isNotEmpty()) {
+      $output = $meta_robots_index_field->toBool();
+    }
+
+    return $output;
   }
 ];

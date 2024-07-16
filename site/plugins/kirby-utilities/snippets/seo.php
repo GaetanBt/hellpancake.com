@@ -16,3 +16,10 @@ if ($meta_description) {
     'content' => $meta_description
   ]);
 }
+
+if ($page->isIndexable() === false) {
+  echo Html::tag('meta', null, [
+    'name' => 'robots',
+    'content' => 'noindex, nofollow'
+  ]);
+}
