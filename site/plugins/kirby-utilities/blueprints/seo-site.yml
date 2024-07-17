@@ -1,0 +1,25 @@
+label: SEO
+
+fields:
+  ku_site_meta_headline:
+    label: Metadonnées du site
+    type: headline
+
+  ku_robots_txt_headline:
+    label: Robots.txt
+    type: headline
+
+  ku_robots_txt_info:
+    label:
+    type: info
+    theme: empty
+    text: Voir <a href="https://github.com/ai-robots-txt/ai.robots.txt">le projet ai.robots.txt sur GitHub</a> qui recense les bots connus d'Intelligence Artificielle.
+
+  ku_bots_to_exclude:
+    label: Liste des robots à exclure
+    type: structure
+    help: Voir <a href="https://github.com/ai-robots-txt/ai.robots.txt">ai.robots.txt sur GitHub</a>.
+    fields:
+      name:
+        label: Nom
+        type: text

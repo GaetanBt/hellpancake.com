@@ -1,15 +1,18 @@
 <?php
 
-use \Kirby\Cms\App as Kirby;
+use Kirby\Cms\App as Kirby;
+use GaetanBt\Kirby\Utilities\Seo;
 
 Kirby::plugin('GaetanBt/kirby-utilities', [
   'options' => [
     'metaDescriptionFromExcerptLength' => 120,
     'metaTitleSeparator' => '|',
+    'seo.generateRobots' => true
   ],
 
   'blueprints' => [
-    'ku/seo/page' => __DIR__ . '/blueprints/seo-page.yml'
+    'ku/seo/page' => __DIR__ . '/blueprints/seo-page.yml',
+    'ku/seo/site' => __DIR__ . '/blueprints/seo-site.yml'
   ],
 
   'snippets' => [
@@ -20,5 +23,18 @@ Kirby::plugin('GaetanBt/kirby-utilities', [
 
   'siteMethods' => include_once __DIR__ . '/src/siteMethods.php',
 
-  'tags' => include_once __DIR__ . '/src/tags.php'
+  'tags' => include_once __DIR__ . '/src/tags.php',
+
+  'routes' => [
+    [
+      'pattern' => 'robots.txt',
+      'action' => function () {
+        if (option('GaetanBt.kirby-utilities.seo.generateRobots') === true) {
+          return Seo::robots();
+        }
+
+        $this->next();
+      }
+    ]
+  ]
 ]);
