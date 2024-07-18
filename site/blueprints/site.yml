@@ -1,5 +1,9 @@
 title: Site
 
-sections:
-  pages:
-    type: pages
+tabs:
+  content:
+    sections:
+      pages:
+        type: pages
+
+  seo: ku/seo/site
