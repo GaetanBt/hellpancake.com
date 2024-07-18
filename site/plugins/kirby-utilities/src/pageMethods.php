@@ -6,7 +6,7 @@ return [
   'getMetaDescription' => function (): ?string
   {
     $description = null;
-    $meta_description_field = $this->content()->get('meta_description');
+    $meta_description_field = $this->content()->get('ku_meta_description');
 
     /**
      * If the page has its own meta description field we use it, else we use the `text` field if it has a value.
@@ -14,7 +14,7 @@ return [
     if ($meta_description_field->isNotEmpty()) {
       $description = $meta_description_field;
     } else if ($this->text()->isNotEmpty()) {
-      $description = $this->text()->excerpt(option('GaetanBt.kirby-utilities.metaDescriptionFromExcerptLength'));
+      $description = $this->text()->excerpt(option('GaetanBt.kirby-utilities.seo.metaDescriptionFromExcerptLength'));
     }
 
     return $description;
@@ -23,8 +23,8 @@ return [
   {
     $title = '';
     $site_title = Kirby::instance()->site()->title();
-    $separator = option('GaetanBt.kirby-utilities.metaTitleSeparator');
-    $meta_title_field = $this->content()->get('meta_title');
+    $separator = option('GaetanBt.kirby-utilities.seo.metaTitleSeparator');
+    $meta_title_field = $this->content()->get('ku_meta_title');
 
     /**
      * If the page has its own meta title field we use it, else if the page has a title set we use it.
@@ -40,7 +40,7 @@ return [
   'isIndexable' => function (): bool
   {
     $output = true;
-    $meta_robots_index_field = $this->content->get('meta_robots_index');
+    $meta_robots_index_field = $this->content->get('ku_meta_robots_index');
 
     if ($meta_robots_index_field->isNotEmpty()) {
       $output = $meta_robots_index_field->toBool();

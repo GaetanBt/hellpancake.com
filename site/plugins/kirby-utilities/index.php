@@ -5,9 +5,11 @@ use GaetanBt\Kirby\Utilities\Seo;
 
 Kirby::plugin('GaetanBt/kirby-utilities', [
   'options' => [
-    'metaDescriptionFromExcerptLength' => 120,
-    'metaTitleSeparator' => '|',
-    'seo.generateRobots' => true
+    'seo' => [
+      'metaDescriptionFromExcerptLength' => 120,
+      'metaTitleSeparator' => '|',
+      'generateRobots' => true
+    ]
   ],
 
   'blueprints' => [
