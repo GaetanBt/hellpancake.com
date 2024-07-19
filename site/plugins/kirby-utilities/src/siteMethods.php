@@ -24,7 +24,8 @@ return [
 
       $data = [
         'url' => $page->url(),
-        'label' => $page->title()
+        'label' => $page->title(),
+        'isHomePage' => $page->isHomePage()
       ];
 
       if ($page->isActive()) {
