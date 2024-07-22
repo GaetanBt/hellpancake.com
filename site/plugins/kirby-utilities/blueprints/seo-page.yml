@@ -1,33 +1,33 @@
-label: SEO
+label: ku.page.seo.tab
 
 columns:
   left:
     width: 2/3
     fields:
       ku_meta_headline:
-        label: Metadonnées de la page
+        label: ku.page.seo.meta_headline
         type: headline
       ku_meta_title:
-        label: Titre
+        label: ku.page.seo.meta_title
         type: text
-        help: Laisser vide pour utiliser le nom de la page.
+        help: ku.page.seo.meta_title.help
         counter: true
         placeholder: '{{ page.title }}'
       ku_meta_description:
-        label: Description
+        label: ku.page.seo.meta_description
         type: text
-        help: Laisser vide pour utiliser le début du contenu de la page s'il existe.
+        help: ku.page.seo.meta_description.help
         counter: true
   right:
     width: 1/3
     fields:
       ku_meta_configuration_headline:
-        label: Configuration
+        label: ku.page.seo.configuration_headline
         type: headline
       ku_meta_robots_index:
-        label: Indexer la page ?
+        label: ku.page.seo.meta_robots_index
         type: toggle
         default: true
         text:
-          - "Non"
-          - "Oui"
+          - ku.no
+          - ku.yes

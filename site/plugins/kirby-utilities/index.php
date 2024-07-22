@@ -27,6 +27,11 @@ Kirby::plugin('GaetanBt/kirby-utilities', [
 
   'tags' => include_once __DIR__ . '/src/tags.php',
 
+  'translations' => [
+    'en' => include_once __DIR__ . '/src/translations/en.php',
+    'fr' => include_once __DIR__ . '/src/translations/fr.php',
+  ],
+
   'routes' => [
     [
       'pattern' => 'robots.txt',

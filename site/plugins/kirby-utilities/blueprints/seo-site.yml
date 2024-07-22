@@ -1,25 +1,24 @@
-label: SEO
+label: ku.site.seo.tab
 
 fields:
   ku_site_meta_headline:
-    label: Metadonnées du site
+    label: ku.site.seo.meta_headline
     type: headline
 
   ku_robots_txt_headline:
-    label: Robots.txt
+    label: ku.site.seo.robots_txt_headline
     type: headline
 
   ku_robots_txt_info:
     label:
     type: info
     theme: empty
-    text: Voir <a href="https://github.com/ai-robots-txt/ai.robots.txt">le projet ai.robots.txt sur GitHub</a> qui recense les bots connus d'Intelligence Artificielle.
+    text: ku.site.seo.robots_txt_info
 
   ku_bots_to_exclude:
-    label: Liste des robots à exclure
+    label: ku.site.seo.bots_to_exclude
     type: structure
-    help: Voir <a href="https://github.com/ai-robots-txt/ai.robots.txt">ai.robots.txt sur GitHub</a>.
     fields:
       name:
-        label: Nom
+        label: ku.site.seo.bots_to_exclude.name
         type: text
