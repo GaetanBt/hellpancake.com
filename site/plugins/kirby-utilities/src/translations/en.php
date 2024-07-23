@@ -17,6 +17,8 @@ return [
   // Site SEO tab
   'ku.site.seo.tab' => 'SEO',
   'ku.site.seo.meta_headline' => 'Site metadata',
+  'ku.site.seo.meta_title_separator' => 'Separator between the page title and the site name',
+  'ku.site.seo.meta_title_separator_help' => 'Leave empty to use the default provided separator: "{{ kirby.option("GaetanBt.kirby-utilities.seo.metaTitleSeparator") }}".',
   'ku.site.seo.robots_txt_headline' => 'Robots.txt',
   'ku.site.seo.robots_txt_info' => 'See <a href="https://github.com/ai-robots-txt/ai.robots.txt">the ai.robots.txt project on GitHub</a> that lists known Artificial Intelligence bots.',
   'ku.site.seo.bots_to_exclude' => 'Bots to exclude list',

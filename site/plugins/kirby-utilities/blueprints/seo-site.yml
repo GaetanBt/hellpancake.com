@@ -5,6 +5,11 @@ fields:
     label: ku.site.seo.meta_headline
     type: headline
 
+  ku_site_meta_title_separator:
+    label: ku.site.seo.meta_title_separator
+    type: text
+    help: ku.site.seo.meta_title_separator_help
+
   ku_robots_txt_headline:
     label: ku.site.seo.robots_txt_headline
     type: headline
