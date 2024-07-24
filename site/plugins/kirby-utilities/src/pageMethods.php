@@ -1,6 +1,7 @@
 <?php
 
 use Kirby\Cms\App;
+use Kirby\Content\Field;
 use GaetanBt\Kirby\Utilities\Helpers;
 
 return [
@@ -8,6 +9,11 @@ return [
   {
     $description = null;
     $meta_description_field = $this->content()->get('ku_meta_description');
+    $default_description_length = Helpers::getValueFromConfigOrPanel('GaetanBt.kirby-utilities.seo.metaDescriptionFromExcerptLength', 'ku_site_meta_description_from_excerpt_length');
+
+    if ($default_description_length instanceof Field) {
+      $default_description_length = $default_description_length->toInt();
+    }
 
     /**
      * If the page has its own meta description field we use it, else we use the `text` field if it has a value.
@@ -15,7 +21,7 @@ return [
     if ($meta_description_field->isNotEmpty()) {
       $description = $meta_description_field;
     } else if ($this->text()->isNotEmpty()) {
-      $description = $this->text()->excerpt(option('GaetanBt.kirby-utilities.seo.metaDescriptionFromExcerptLength'));
+      $description = $this->text()->excerpt($default_description_length);
     }
 
     return $description;

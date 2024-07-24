@@ -6,7 +6,7 @@ use GaetanBt\Kirby\Utilities\Seo;
 App::plugin('GaetanBt/kirby-utilities', [
   'options' => [
     'seo' => [
-      'metaDescriptionFromExcerptLength' => 120,
+      'metaDescriptionFromExcerptLength' => 150,
       'metaTitleSeparator' => '|',
       'generateRobots' => true
     ]
