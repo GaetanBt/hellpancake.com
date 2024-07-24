@@ -1,6 +1,6 @@
 <?php
 
-use Kirby\Cms\App as Kirby;
+use Kirby\Cms\App;
 use GaetanBt\Kirby\Utilities\Helpers;
 
 return [
@@ -23,7 +23,7 @@ return [
   'getMetaTitle' => function (): string
   {
     $title = '';
-    $site_title = Kirby::instance()->site()->content()->get('title');
+    $site_title = App::instance()->site()->content()->get('title');
     $separator = Helpers::getValueFromConfigOrPanel('GaetanBt.kirby-utilities.seo.metaTitleSeparator', 'ku_site_meta_title_separator');
     $meta_title_field = $this->content()->get('ku_meta_title');
 

@@ -1,6 +1,6 @@
 <?php
 
-use \Kirby\Toolkit\Html;
+use Kirby\Toolkit\Html;
 
 return [
   'abbr' => [

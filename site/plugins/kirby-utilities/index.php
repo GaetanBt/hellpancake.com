@@ -1,9 +1,9 @@
 <?php
 
-use Kirby\Cms\App as Kirby;
+use Kirby\Cms\App;
 use GaetanBt\Kirby\Utilities\Seo;
 
-Kirby::plugin('GaetanBt/kirby-utilities', [
+App::plugin('GaetanBt/kirby-utilities', [
   'options' => [
     'seo' => [
       'metaDescriptionFromExcerptLength' => 120,

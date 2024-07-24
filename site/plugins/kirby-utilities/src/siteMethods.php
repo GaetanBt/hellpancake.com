@@ -1,12 +1,12 @@
 <?php
 
-use Kirby\Cms\App as Kirby;
-use \Kirby\Cms\Url;
+use Kirby\Cms\App;
+use Kirby\Cms\Url;
 
 return [
   'shortUrl' => function (bool $withLanguageSlug = false): string
   {
-    $url = $withLanguageSlug ? $this->url() : Kirby::instance()->url();
+    $url = $withLanguageSlug ? $this->url() : App::instance()->url();
 
     return Url::short($url);
   },
