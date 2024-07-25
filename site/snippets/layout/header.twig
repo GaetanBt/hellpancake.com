@@ -1,12 +1,12 @@
 <header role="banner">
   <div class="container">
     <div class="Header-top flex">
-      <nav role="navigation" aria-label="Liens d'accès rapide">
-        <a href="#main-content">Aller au contenu</a>
+      <nav role="navigation" aria-label="{{ t('skiplinks.label') }}">
+        <a href="#main-content">{{ t('skiplinks.content') }}</a>
       </nav>
     </div>
     <div class="Header-body">
-      navigation
+      {{ snippet('components/navigation') }}
     </div>
   </div>
 </header>

@@ -1,5 +1,6 @@
 <?php
 
 return [
-  'environment' => 'production'
+  'environment' => 'production',
+  'languages' => true
 ];

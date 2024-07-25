@@ -1,0 +1,23 @@
+<nav role="navigation" aria-label="{{ t('navigation.label') }}">
+  <ul class="flex flex-wrap justify-content-center list-reset">
+    {% for link in site.navigation() %}
+      {% if link.isHomePage %}
+        <li class="flex-grow-1">
+          {{ snippet('components/navlink', {
+            'link': link|merge({
+              'label': t('navigation.home.link.label')
+            }),
+            'class': 'brand',
+            'title': t('navigation.home.link.title')
+          }) }}
+        </li>
+      {% else %}
+        <li>
+          {{ snippet('components/navlink', {
+            'link': link
+          }) }}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>
