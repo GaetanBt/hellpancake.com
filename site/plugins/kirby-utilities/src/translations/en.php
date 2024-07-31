@@ -12,6 +12,7 @@ return [
   'ku.page.seo.meta_description' => 'Description',
   'ku.page.seo.meta_description.help' => 'Leave empty to use the beginning of the page content if it exists.',
   'ku.page.seo.configuration_headline' => 'Configuration',
+  'ku.page.seo.is_translated' => 'Page is translated',
   'ku.page.seo.meta_robots_index' => 'Index page?',
 
   // Site SEO tab

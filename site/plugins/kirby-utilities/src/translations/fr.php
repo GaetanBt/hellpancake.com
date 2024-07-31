@@ -12,6 +12,7 @@ return [
   'ku.page.seo.meta_description' => 'Description',
   'ku.page.seo.meta_description.help' => 'Laisser vide pour utiliser le début du contenu de la page s\'il existe.',
   'ku.page.seo.configuration_headline' => 'Configuration',
+  'ku.page.seo.is_translated' => 'La page est traduite',
   'ku.page.seo.meta_robots_index' => 'Indexer la page ?',
 
   // Site SEO tab

@@ -17,6 +17,10 @@ App::plugin('GaetanBt/kirby-utilities', [
     'ku/seo/site' => __DIR__ . '/blueprints/seo-site.yml'
   ],
 
+  'hooks' => [
+    'page.render:before' => include_once __DIR__ . '/src/hooks/page-render-before.php'
+  ],
+
   'snippets' => [
     'ku/seo/head' => __DIR__ . '/snippets/seo.php'
   ],
