@@ -1,0 +1,15 @@
+<nav role="navigation" aria-label="{{ t('changelang.label') }}">
+  <ul class="list-reset flex">
+    {% for language in site.changelang(page) -%}
+      {%- set titleI18nKey = language.translationIsAvailable ? 'changelang.pageAvailableIn' : 'changelang.pageNotAvailableIn' -%}
+      <li>
+        {% if language.isActive %}
+          <a aria-current="true">{{ language.name }}</a>
+        {% else %}
+          <a href="{{ language.url }}" hreflang="{{ language.code }}" lang="{{ language.code }}" title="{{ t(titleI18nKey, null, language.code) }}">
+            {{ language.name }}
+          </a>
+        {% endif %}
+    {% endfor -%}
+  </ul>
+</nav>
