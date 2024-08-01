@@ -1,63 +1,17 @@
 <?php
 
-use Kirby\Cms\App;
-use Kirby\Content\Field;
 use Kirby\Exception\NotFoundException;
-use GaetanBt\Kirby\Utilities\Helpers;
+use GaetanBt\Kirby\Utilities\Seo;
 
 return [
-  'getMetaDescription' => function (): ?string
-  {
-    $description = null;
-    $meta_description_field = $this->content()->get('ku_meta_description');
-    $default_description_length = Helpers::getValueFromConfigOrPanel('GaetanBt.kirby-utilities.seo.metaDescriptionFromExcerptLength', 'ku_site_meta_description_from_excerpt_length');
+  'metaDescription' => fn() => Seo::description($this),
+  'metaTitle'       => fn() => Seo::title($this),
+  'isIndexable'     => fn() => Seo::isIndexable($this),
 
-    if ($default_description_length instanceof Field) {
-      $default_description_length = $default_description_length->toInt();
-    }
-
-    /**
-     * If the page has its own meta description field we use it, else we use the `text` field if it has a value.
-     */
-    if ($meta_description_field->isNotEmpty()) {
-      $description = $meta_description_field;
-    } else if ($this->text()->isNotEmpty()) {
-      $description = $this->text()->excerpt($default_description_length);
-    }
-
-    return $description;
-  },
-  'getMetaTitle' => function (): string
-  {
-    $title = '';
-    $site_title = App::instance()->site()->content()->get('title');
-    $separator = Helpers::getValueFromConfigOrPanel('GaetanBt.kirby-utilities.seo.metaTitleSeparator', 'ku_site_meta_title_separator');
-    $meta_title_field = $this->content()->get('ku_meta_title');
-
-    /**
-     * If the page has its own meta title field we use it, else if the page has a title set we use it.
-     */
-    if ($meta_title_field->isNotEmpty() or $this->title()) {
-      $page_title = $meta_title_field->isNotEmpty() ? $meta_title_field : $this->title();
-
-      $title = $page_title . ' ' . $separator . ' ' . $site_title;
-    }
-
-    return $title;
-  },
-  'isIndexable' => function (): bool
-  {
-    $output = true;
-    $meta_robots_index_field = $this->content->get('ku_meta_robots_index');
-
-    if ($meta_robots_index_field->isNotEmpty()) {
-      $output = $meta_robots_index_field->toBool();
-    }
-
-    return $output;
-  },
   /**
    * Check if there is some content on the destination page `text` field
+   *
+   * @throws Kirby\Exception\NotFoundException if the `ku_page_is_translated` field name is not found in the ContentTranslation `content` array.
    */
   'isTranslatedIn' => function (string $languageCode): bool
   {
@@ -74,6 +28,12 @@ return [
 
     return filter_var($content_translation[$field_name], FILTER_VALIDATE_BOOLEAN);
   },
+
+  /**
+   * Check if the current page is translated
+   *
+   * @throws Kirby\Exception\NotFoundException if the `ku_page_is_translated` field is empty.
+   */
   'isTranslated' => function (): bool
   {
     $field_name = 'ku_page_is_translated';

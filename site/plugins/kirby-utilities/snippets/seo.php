@@ -6,9 +6,9 @@
 
 use Kirby\Cms\Html;
 
-$meta_description = $page->getMetaDescription();
+$meta_description = $page->metaDescription();
 
-echo Html::tag('title', $page->getMetaTitle());
+echo Html::tag('title', $page->metaTitle());
 
 if ($meta_description) {
   echo Html::tag('meta', null, [
