@@ -27,6 +27,8 @@ App::plugin('GaetanBt/kirby-utilities', [
 
   'pageMethods' => include_once __DIR__ . '/src/pageMethods.php',
 
+  'pagesMethods' => include_once __DIR__ . '/src/pagesMethods.php',
+
   'siteMethods' => include_once __DIR__ . '/src/siteMethods.php',
 
   'tags' => include_once __DIR__ . '/src/tags.php',
