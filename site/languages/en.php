@@ -18,7 +18,7 @@ return [
         'navigation.label' => 'Main menu',
         'navigation.home.link.label' => '<span class="text-stack">Hell</span> <span class="text-primary">Pancake</span><span class="sr-only">, go to homepage</span>',
         'navigation.home.link.title' => 'Hell Pancake, go to homepage',
-        'post.author' => 'author',
+        'post.author' => 'Author',
         'post.publishedDate' => 'Published on',
         'post.lastUpdated' => 'Last updated on'
     ],
