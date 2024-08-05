@@ -3,7 +3,7 @@
 
 <a
     {%- if class %} class="{{ class }}"{% endif %}
-    {%- if link.current %} aria-current="{{ link.current }}"{% else %} href="{{ link.url }}"{% endif %}
+    {%- if link.current == 'page' %} aria-current="page"{% else %} href="{{ link.url }}"{% endif %}
     {%- if title %} title="{{ title }}"{% endif %}>
   {{ link.label | raw }}
 </a>
