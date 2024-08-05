@@ -2,6 +2,9 @@
 
 namespace GaetanBt\Kirby\Utilities;
 
+use IntlDateFormatter;
+use Kirby\Cms\App;
+use Kirby\Content\Field;
 use GaetanBt\Kirby\Utilities\Enum\FieldOrigin;
 
 final class Helpers
@@ -22,5 +25,26 @@ final class Helpers
     }
 
     return null;
+  }
+
+  /**
+   * Provide a localized date from a Kirby date field.
+   * This requires the use of the `intl` date handler instead of PHP's `date` function
+   *
+   * @see https://getkirby.com/docs/guide/languages#language-specific-date-handlers
+   */
+  public static function localizeDateField(Field $dateField, ?string $locale = null): string
+  {
+    if (null === $locale) {
+      $locale = App::instance()->language()->locale(LC_ALL);
+    }
+
+    $formatter = new IntlDateFormatter(
+      $locale,
+      IntlDateFormatter::LONG,
+      IntlDateFormatter::NONE
+    );
+
+    return $formatter->format($dateField->toDate());
   }
 }
