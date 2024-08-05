@@ -1,0 +1,27 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+  <h1>{{ page.title }}</h1>
+
+  <ol class="list-reset">
+    {% for post in page.children().listedAndTranslated.flip %}
+      {%- set tags = post.tags.split() -%}
+      <li>
+        <article class="Post{{ loop.last ? " mb-0" }}">
+          <h2 class="mb-0">
+            <a class="Post-title" href="{{ post.url }}">{{ post.title }}</a>
+          </h2>
+          <small class="text-muted">
+            <time datetime="{{ post.published_on }}" class="Post-date has-icon-before">{{ post.published_on | localizeDateField }}</time>
+            {% if tags | length %}
+              <span class="Post-tags has-icon-before">{{ tags | join(", ") }}</span>
+            {% endif %}
+          </small>
+          {% if post.excerpt.isNotEmpty %}
+            {{ post.excerpt | raw }}
+          {% endif %}
+        </article>
+      </li>
+    {%- endfor -%}
+  </ol>
+{% endblock %}

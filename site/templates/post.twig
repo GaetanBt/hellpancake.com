@@ -1,0 +1,23 @@
+{% extends "layouts/base.twig" %}
+
+{% set author = page.author.toUser %}
+
+{% block content %}
+  <h1>{{ page.title }}</h1>
+
+  {% for block in page.text.toBlocks %}
+    {{ block.toHtml | raw }}
+  {% endfor %}
+
+  <div class="Note Note--info Post-infos">
+    <ul class="m-0">
+      <li><strong>{{ t("post.publishedDate") }} :</strong> <time datetime="{{ page.published_on.toDate }}">{{ page.published_on | localizeDateField }}</time></li>
+      {%- if page.updated_on.isNotEmpty -%}
+        <li><strong>{{ t("post.lastUpdated") }} :</strong> <time datetime="{{ page.updated_on.toDate }}">{{ page.updated_on | localizeDateField }}</time></li>
+      {%- endif -%}
+      {%- if author -%}
+      <li><strong>{{ t("post.author") }} :</strong> {{ author.username }}</li>
+      {%- endif -%}
+    </ul>
+  </div>
+{% endblock %}

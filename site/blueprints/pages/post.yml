@@ -1,0 +1,97 @@
+title:
+  en: Post
+  fr: Article
+
+tabs:
+  content:
+    label:
+      en: Content
+      fr: Contenu
+    columns:
+      main:
+        width: 2/3
+        sections:
+          fields:
+            type: fields
+            fields:
+              excerpt:
+                label:
+                  en: Post excerpt
+                  fr: Extrait de l'article
+                type: writer
+              text:
+                label:
+                  en: Post content
+                  fr: Contenu de l'article
+                type: blocks
+                fieldsets:
+                  text:
+                    label:
+                      en: Text
+                      fr: Texte
+                    type: group
+                    fieldsets:
+                      - heading
+                      - text
+                      - list
+                      - table
+                      - markdown
+                      - quote
+                  media:
+                    label:
+                      en: Media
+                      fr: Médias
+                    type: group
+                    fieldsets:
+                      - image
+                      - video
+
+      sidebar:
+        width: 1/3
+        sections:
+          post_metas:
+            type: fields
+            fields:
+              published_on:
+                label:
+                  en: Publication date
+                  fr: Date de publication
+                type: date
+                required: true
+                display: 'DD/MM/YYYY'
+                help: 'Format : JJ/MM/AAAA'
+
+              updated_on:
+                label:
+                  en: Last modified date
+                  fr: Date de dernière modification
+                type: date
+                display: 'DD/MM/YYYY'
+                help: 'Format : JJ/MM/AAAA'
+
+              author:
+                label:
+                  en: Author
+                  fr: Auteur ou autrice
+                type: users
+                max: 1
+                required: true
+
+              tags:
+                label:
+                  en: Tags
+                  fr: Tags
+                type: tags
+                options:
+                  type: query
+                  query: site.children.filterBy('template', 'blog').first().categories.toStructure
+                  text: "{{ item.name }}"
+                  value: "{{ item.name }}"
+
+          files:
+            label:
+              en: Files
+              fr: Fichiers
+            type: files
+
+  seo: ku/seo/page

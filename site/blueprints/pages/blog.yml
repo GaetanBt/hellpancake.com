@@ -1,0 +1,66 @@
+title:
+  en: Blog
+  fr: Blog
+
+options:
+  delete: false
+
+tabs:
+  content:
+    label:
+      en: Content
+      fr: Contenu
+    columns:
+      main:
+        width: 1/2
+        sections:
+          drafts:
+            label:
+              en: Drafts
+              fr: Brouillons
+            type: pages
+            status: draft
+            template: post
+            empty:
+              en: No post drafts
+              fr: Aucun brouillon d'article
+
+          in_review:
+            label:
+              en: In review
+              fr: En relecture
+            type: pages
+            status: unlisted
+            empty:
+              en: No posts under review
+              fr: Aucun article en relecture
+
+          fields:
+            type: fields
+            fields:
+              categories:
+                label:
+                  en: Posts categories
+                  fr: Catégories d'articles
+                type: structure
+                fields:
+                  name:
+                    label:
+                      en: Name
+                      fr: Nom
+                    type: text
+
+      sidebar:
+        width: 1/2
+        sections:
+          published:
+            label:
+              en: Published posts
+              fr: Articles publiés
+            type: pages
+            status: listed
+            empty:
+              en: No published posts yet
+              fr: Aucun article publié
+
+  seo: ku/seo/page
