@@ -1,0 +1,20 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+  <h1>{{ page.title }}</h1>
+
+  {%- for entry in site.children().listedAndTranslated() | filter(entry => entry != page) -%}
+    {%- set children = entry.intendedTemplate.name == 'blog' ? kirby.collection('posts') : entry.children().listedAndTranslated() -%}
+    <h2 class="mb-0">
+      <a href="{{ entry.url }}">{{ entry.title }}</a>
+    </h2>
+
+    {%- if children | length > 0 -%}
+      <ul>
+        {%- for child in children -%}
+          <li><a href="{{ child.url }}">{{ child.title }}</a></li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  {%- endfor -%}
+{% endblock %}

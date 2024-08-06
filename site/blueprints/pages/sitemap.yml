@@ -1,0 +1,24 @@
+title:
+  en: Sitemap
+  fr: Plan du site
+
+tabs:
+  content:
+    label:
+      en: Content
+      fr: Contenu
+    sections:
+      fields:
+        type: fields
+        fields:
+          info:
+            label:
+              en: Informations
+              fr: Informations
+            type: info
+            theme: empty
+            text:
+              en: There are no content fields available for the sitemap for now.
+              fr: Il n'y a pas de champs permettant de configurer le contenu du plan de site pour l'instant.
+
+  seo: ku/seo/page

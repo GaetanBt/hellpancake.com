@@ -1,3 +1,4 @@
+{%- set sitemap = site.children().findBy('intendedTemplate', 'sitemap') -%}
 <footer class="text-center text-bold" role="contentinfo">
-  © 2020 - {{ "now" | date("Y") }} {{ site.shortUrl }}
+  © 2020 - {{ "now" | date("Y") }} {{ site.shortUrl }} - <a href="{{ sitemap.url }}">{{ sitemap.title }}</a>
 </footer>
