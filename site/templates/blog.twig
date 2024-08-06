@@ -4,7 +4,7 @@
   <h1>{{ page.title }}</h1>
 
   <ol class="list-reset">
-    {% for post in page.children().listedAndTranslated.flip %}
+    {% for post in kirby.collection('posts') %}
       {%- set tags = post.tags.split() -%}
       <li>
         <article class="Post{{ loop.last ? " mb-0" }}">
