@@ -4,7 +4,9 @@ title:
 
 tabs:
   content:
-    label: Contenu
+    label:
+      en: Content
+      fr: Contenu
     columns:
       main:
         width: 2/3
