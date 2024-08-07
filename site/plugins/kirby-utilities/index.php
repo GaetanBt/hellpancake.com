@@ -22,7 +22,8 @@ App::plugin('GaetanBt/kirby-utilities', [
   ],
 
   'snippets' => [
-    'ku/seo/head' => __DIR__ . '/snippets/seo.php'
+    'ku/seo/head' => __DIR__ . '/snippets/seo.php',
+    'ku/seo/sitemap' => __DIR__ . '/snippets/sitemap.php'
   ],
 
   'pageMethods' => include_once __DIR__ . '/src/pageMethods.php',
@@ -47,6 +48,12 @@ App::plugin('GaetanBt/kirby-utilities', [
         }
 
         $this->next();
+      }
+    ],
+    [
+      'pattern' => 'sitemap.xml',
+      'action' => function () {
+        return Seo::sitemap();
       }
     ]
   ]

@@ -69,6 +69,8 @@ class Seo
     $robots = 'User-agent: *' . PHP_EOL;
     $robots .= 'Disallow:' . PHP_EOL . PHP_EOL;
 
+    $robots .= 'Sitemap: ' . App::instance()->url() . '/sitemap.xml' . PHP_EOL . PHP_EOL;
+
     if ($exclude_field->isNotEmpty()) {
       $excludes = $exclude_field->toStructure();
 
@@ -79,5 +81,15 @@ class Seo
     }
 
     return new Response($robots, 'text/plain', 200);
+  }
+
+  public static function sitemap(): Response
+  {
+    $pages = App::instance()->site()->pages()->index();
+
+    $ignore = App::instance()->option('GaetanBt.kirby-utilities.seo.sitemap.ignore', ['error']);
+    $content = snippet('ku/seo/sitemap', compact('pages', 'ignore'), true);
+
+    return new Response($content, 'application/xml', 200);
   }
 }
