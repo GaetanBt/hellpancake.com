@@ -15,18 +15,7 @@ return [
    */
   'isTranslatedIn' => function (string $languageCode): bool
   {
-    if (false === $this->translation($languageCode)->exists()) {
-      return false;
-    }
-
-    $field_name = 'ku_page_is_translated';
-    $content_translation = $this->translation($languageCode)->content();
-
-    if (false === array_key_exists($field_name, $content_translation)) {
-      throw new NotFoundException($field_name . ' field was not found.');
-    }
-
-    return filter_var($content_translation[$field_name], FILTER_VALIDATE_BOOLEAN);
+    return $this->isTranslated($languageCode);
   },
 
   /**
@@ -34,10 +23,14 @@ return [
    *
    * @throws Kirby\Exception\NotFoundException if the `ku_page_is_translated` field is empty.
    */
-  'isTranslated' => function (): bool
+  'isTranslated' => function (?string $languageCode = null): bool
   {
+    if (null !== $languageCode and false === $this->translation($languageCode)->exists()) {
+      return false;
+    }
+
     $field_name = 'ku_page_is_translated';
-    $field = $this->content()->get($field_name);
+    $field = $this->content($languageCode)->get($field_name);
 
     if ($field->isEmpty()) {
       throw new NotFoundException($field_name . ' field was not found.');
