@@ -1,0 +1,25 @@
+type: fields
+fields:
+  ku_user_metas:
+    label: ku.user.metas
+    type: object
+    translate: false
+    help: ku.user.metas.help
+    fields:
+      website:
+        label: ku.user.website
+        type: url
+      public_name:
+        label: ku.user.public_name
+        type: text
+        help: ku.user.public_name.help
+      public_email:
+        label: ku.user.public_email
+        type: email
+        help: ku.user.public_email.help
+      display_email_on_website:
+        extends: ku/fields/toggle
+        label: ku.user.display_email_on_website
+      display_email_in_sitemap:
+        extends: ku/fields/toggle
+        label: ku.user.display_email_in_sitemap

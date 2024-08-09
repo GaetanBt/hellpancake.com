@@ -26,4 +26,15 @@ return [
   'ku.site.seo.robots_txt_info' => 'See <a href="https://github.com/ai-robots-txt/ai.robots.txt">the ai.robots.txt project on GitHub</a> that lists known Artificial Intelligence bots.',
   'ku.site.seo.bots_to_exclude' => 'Bots to exclude list',
   'ku.site.seo.bots_to_exclude.name' => 'Name',
+
+  // User metas blueprints
+  'ku.user.metas' => 'Personal informations',
+  'ku.user.metas.help' => 'These informations are used for the Atom feed generation and on the post pages.',
+  'ku.user.website' => 'Website',
+  'ku.user.public_name' => 'Public name',
+  'ku.user.public_name.help' => 'Leave empty to use the account name',
+  'ku.user.public_email' => 'Public email',
+  'ku.user.public_email.help' => 'Leave empty to use the account email',
+  'ku.user.display_email_on_website' => 'Display email on website',
+  'ku.user.display_email_in_sitemap' => 'Display email in sitemap.xml',
 ];
