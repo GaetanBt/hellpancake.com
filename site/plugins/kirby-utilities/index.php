@@ -14,7 +14,8 @@ App::plugin('GaetanBt/kirby-utilities', [
 
   'blueprints' => [
     'ku/seo/page' => __DIR__ . '/blueprints/seo-page.yml',
-    'ku/seo/site' => __DIR__ . '/blueprints/seo-site.yml'
+    'ku/seo/site' => __DIR__ . '/blueprints/seo-site.yml',
+    'ku/fields/toggle' => __DIR__ . '/blueprints/fields/toggle.yml',
   ],
 
   'hooks' => [

@@ -1,0 +1,8 @@
+label:
+  en: Default toggle label
+  fr: Label par défaut du toggle
+type: toggle
+default: true
+text:
+  - ku.no
+  - ku.yes
