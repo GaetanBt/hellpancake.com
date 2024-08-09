@@ -15,6 +15,7 @@ App::plugin('GaetanBt/kirby-utilities', [
   'blueprints' => [
     'ku/seo/page' => __DIR__ . '/blueprints/seo-page.yml',
     'ku/seo/site' => __DIR__ . '/blueprints/seo-site.yml',
+    'ku/feed/site' => __DIR__ . '/blueprints/feed-site.yml',
     'ku/user/metas' => __DIR__ . '/blueprints/user-metas.yml',
     'ku/fields/toggle' => __DIR__ . '/blueprints/fields/toggle.yml',
   ],
@@ -24,6 +25,7 @@ App::plugin('GaetanBt/kirby-utilities', [
   ],
 
   'snippets' => [
+    'ku/feed/atom' => __DIR__ . '/snippets/atom.php',
     'ku/seo/head' => __DIR__ . '/snippets/seo.php',
     'ku/seo/sitemap' => __DIR__ . '/snippets/sitemap.php'
   ],
@@ -56,6 +58,12 @@ App::plugin('GaetanBt/kirby-utilities', [
       'pattern' => 'sitemap.xml',
       'action' => function () {
         return Seo::sitemap();
+      }
+    ],
+    [
+      'pattern' => 'feed-(' . implode('|', App::instance()->languages()->codes()) . ').xml',
+      'action' => function ($languageCode) {
+        return Seo::feed($languageCode);
       }
     ]
   ]

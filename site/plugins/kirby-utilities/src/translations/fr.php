@@ -27,6 +27,12 @@ return [
   'ku.site.seo.bots_to_exclude' => 'Liste des robots à exclure',
   'ku.site.seo.bots_to_exclude.name' => 'Nom',
 
+  // Site feed tab
+  'ku.site.feed.tab' => 'Flux',
+  'ku.site.feed.atom_headline' => 'Configuration du flux Atom',
+  'ku.site.feed.atom_title' => 'Titre du flux Atom',
+  'ku.site.feed.atom_subtitle' => 'Sous-titre du flux Atom',
+
   // User metas blueprints
   'ku.user.metas' => 'Informations personnelles',
   'ku.user.metas.help' => 'Ces informations sont utilisées pour la génération du flux Atom et l\'affichage des articles.',

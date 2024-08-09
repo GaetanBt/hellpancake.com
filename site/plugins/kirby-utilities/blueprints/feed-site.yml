@@ -1,0 +1,14 @@
+label: ku.site.feed.tab
+
+fields:
+  ku_site_feed_atom_headline:
+    label: ku.site.feed.atom_headline
+    type: headline
+
+  ku_site_feed_atom_title:
+    label: ku.site.feed.atom_title
+    type: text
+
+  ku_site_feed_atom_subtitle:
+    label: ku.site.feed.atom_subtitle
+    type: text

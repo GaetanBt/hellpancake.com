@@ -27,6 +27,12 @@ return [
   'ku.site.seo.bots_to_exclude' => 'Bots to exclude list',
   'ku.site.seo.bots_to_exclude.name' => 'Name',
 
+  // Site feed tab
+  'ku.site.feed.tab' => 'Feed',
+  'ku.site.feed.atom_headline' => 'Atom feed configuration',
+  'ku.site.feed.atom_title' => 'Atom feed title',
+  'ku.site.feed.atom_subtitle' => 'Atom feed subtitle',
+
   // User metas blueprints
   'ku.user.metas' => 'Personal informations',
   'ku.user.metas.help' => 'These informations are used for the Atom feed generation and on the post pages.',
