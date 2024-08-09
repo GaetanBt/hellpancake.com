@@ -2,6 +2,7 @@
 
 namespace GaetanBt\Kirby\Utilities;
 
+use GaetanBt\Kirby\Utilities\Helpers\PanelHelper;
 use Kirby\Cms\App;
 use Kirby\Cms\Page;
 use Kirby\Content\Field;
@@ -13,7 +14,7 @@ class Seo
   {
     $title = '';
     $site_title = App::instance()->site()->content()->get('title');
-    $separator = Helpers::getValueFromConfigOrPanel('GaetanBt.kirby-utilities.seo.metaTitleSeparator', 'ku_site_meta_title_separator');
+    $separator = PanelHelper::getValueFromConfigOrPanel('GaetanBt.kirby-utilities.seo.metaTitleSeparator', 'ku_site_meta_title_separator');
     $field = $page->content()->get('ku_meta_title');
 
     /**
@@ -32,7 +33,7 @@ class Seo
   {
     $description = null;
     $field = $page->content()->get('ku_meta_description');
-    $default_description_length = Helpers::getValueFromConfigOrPanel('GaetanBt.kirby-utilities.seo.metaDescriptionFromExcerptLength', 'ku_site_meta_description_from_excerpt_length');
+    $default_description_length = PanelHelper::getValueFromConfigOrPanel('GaetanBt.kirby-utilities.seo.metaDescriptionFromExcerptLength', 'ku_site_meta_description_from_excerpt_length');
 
     if ($default_description_length instanceof Field) {
       $default_description_length = $default_description_length->toInt();

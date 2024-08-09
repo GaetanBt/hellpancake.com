@@ -1,13 +1,13 @@
 <?php
 
-namespace GaetanBt\Kirby\Utilities;
+namespace GaetanBt\Kirby\Utilities\Helpers;
 
+use GaetanBt\Kirby\Utilities\Enum\FieldOrigin;
 use IntlDateFormatter;
 use Kirby\Cms\App;
 use Kirby\Content\Field;
-use GaetanBt\Kirby\Utilities\Enum\FieldOrigin;
 
-final class Helpers
+final class PanelHelper
 {
   /**
    * Get a value from the configuration file or from the panel if it exists.
