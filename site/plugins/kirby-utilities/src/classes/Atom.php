@@ -108,6 +108,7 @@ class Atom
       $author = $entry->addChild('author');
 
       foreach ($attributes['author'] as $name => $value) {
+        if (null === $value) continue;
         $author->addChild($name, $value);
       }
 
