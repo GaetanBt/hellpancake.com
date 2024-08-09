@@ -1,0 +1,5 @@
+title: role.admin.title
+description: role.admin.description
+
+sections:
+  feed: ku/user/metas
