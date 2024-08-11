@@ -59,12 +59,6 @@ App::plugin('GaetanBt/kirby-utilities', [
       'action' => function () {
         return Seo::sitemap();
       }
-    ],
-    [
-      'pattern' => 'feed-(' . implode('|', App::instance()->languages()->codes()) . ').xml',
-      'action' => function ($languageCode) {
-        return Seo::feed($languageCode);
-      }
     ]
   ]
 ]);
