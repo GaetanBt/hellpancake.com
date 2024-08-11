@@ -14,6 +14,8 @@ class Atom
 
   public array $attributes;
 
+  public array $entries;
+
   public array $requiredFeedAttributes = [
     'link',
     'title',
@@ -28,18 +30,17 @@ class Atom
 
   public \SimpleXMLElement $xml;
 
-  public function __construct(string $languageCode, array $attributes)
+  public function __construct(string $languageCode, array $attributes = [])
   {
     $this->languageCode = $languageCode;
     $this->attributes = $attributes;
 
-    $this->init();
+    $this->xml = new \SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><feed xml:lang="' . $this->languageCode . '" xmlns="http://www.w3.org/2005/Atom"></feed>');
   }
 
-  public function init(): self
+  public function updated(string $value): self
   {
-    $this->xml = new \SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><feed xml:lang="' . $this->languageCode . '" xmlns="http://www.w3.org/2005/Atom"></feed>');
-    $this->addFeedDefinitions();
+    $this->attributes['updated'] = $value;
 
     return $this;
   }
@@ -87,6 +88,35 @@ class Atom
     return $this;
   }
 
+  public function addFeedEntries(): self
+  {
+    foreach ($this->entries as $entry) {
+      $xml = $this->xml->addChild('entry');
+
+      $link = $xml->addChild('link');
+      $link->addAttribute('href', $entry['link']);
+
+      if (isset($entry['author'])) {
+        $author = $xml->addChild('author');
+
+        foreach ($entry['author'] as $name => $value) {
+          if (null === $value) continue;
+          $author->addChild($name, $value);
+        }
+
+        unset($entry['author']);
+      }
+
+      unset($entry['link']);
+
+      foreach ($entry as $name => $value) {
+        $xml->addChild($name, $value);
+      }
+    }
+
+    return $this;
+  }
+
   public function entry(array $attributes): self
   {
     foreach ($this->requiredEntryAttributes as $required) {
@@ -99,33 +129,16 @@ class Atom
       $attributes['id'] = $attributes['link'];
     }
 
-    $entry = $this->xml->addChild('entry');
-
-    $link = $entry->addChild('link');
-    $link->addAttribute('href', $attributes['link']);
-
-    if (isset($attributes['author'])) {
-      $author = $entry->addChild('author');
-
-      foreach ($attributes['author'] as $name => $value) {
-        if (null === $value) continue;
-        $author->addChild($name, $value);
-      }
-
-      unset($attributes['author']);
-    }
-
-    unset($attributes['link']);
-
-    foreach ($attributes as $name => $value) {
-      $entry->addChild($name, $value);
-    }
+    $this->entries[] = $attributes;
 
     return $this;
   }
 
   public function generate(): string
   {
+    $this->addFeedDefinitions();
+    $this->addFeedEntries();
+
     return $this->xml->asXML();
   }
 

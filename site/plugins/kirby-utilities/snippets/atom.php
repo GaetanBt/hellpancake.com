@@ -20,10 +20,11 @@ $site = $kirby->site()->content($languageCode);
 $atom = new Atom($languageCode, [
   'title' => $site->get('ku_site_feed_atom_title'),
   'subtitle' => $site->get('ku_site_feed_atom_subtitle'),
-  'updated' => date('c'), // todo
   'link' => StringHelper::withTrailingSlash($kirby->url()),
   'feedUrl' => Url::current(),
 ]);
+
+$last_update = 0;
 
 foreach ($pages as $post) {
   if (in_array($post->uri(), $ignore) or false === $post->isTranslatedIn($languageCode)) continue;
@@ -38,10 +39,16 @@ foreach ($pages as $post) {
     $updated = $published;
   }
 
+  $updated_timestamp = $updated->toDate();
+
+  if ($last_update < $updated_timestamp) {
+    $last_update = $updated_timestamp;
+  }
+
   $atom->entry([
     'title'     => $p->title(),
     'published' => date('c', $published->toDate()),
-    'updated'   => date('c', $updated->toDate()),
+    'updated'   => date('c', $updated_timestamp),
     'summary'   => Str::unhtml($p->excerpt()),
     'link'      => StringHelper::withTrailingSlash($post->url($languageCode)),
     'author' => [
@@ -51,5 +58,7 @@ foreach ($pages as $post) {
     ]
   ]);
 }
+
+$atom->updated(date('c', $last_update));
 
 $atom->render();
