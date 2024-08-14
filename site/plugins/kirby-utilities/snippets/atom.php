@@ -16,6 +16,7 @@ use GaetanBt\Kirby\Utilities\Enum\UserInfoDestination;
 
 $kirby = App::instance();
 $site = $kirby->site()->content($languageCode);
+$destination = UserInfoDestination::SitemapXML;
 
 $atom = new Atom($languageCode, [
   'title' => $site->get('ku_site_feed_atom_title'),
@@ -45,6 +46,12 @@ foreach ($pages as $post) {
     $last_update = $updated_timestamp;
   }
 
+  $uri = UserHelper::website($author, $destination);
+
+  if (null !== $uri) {
+    $uri = StringHelper::withTrailingSlash($uri);
+  }
+
   $atom->entry([
     'title'     => $p->title(),
     'published' => date('c', $published->toDate()),
@@ -53,8 +60,8 @@ foreach ($pages as $post) {
     'link'      => StringHelper::withTrailingSlash($post->url($languageCode)),
     'author' => [
       'name' => UserHelper::name($author),
-      'uri' => StringHelper::withTrailingSlash(UserHelper::website($author)),
-      'email' => UserHelper::email($author, UserInfoDestination::SitemapXML)
+      'uri' => $uri,
+      'email' => UserHelper::email($author, $destination)
     ]
   ]);
 }

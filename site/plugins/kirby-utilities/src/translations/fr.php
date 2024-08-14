@@ -43,4 +43,6 @@ return [
   'ku.user.public_email.help' => 'Laisser vide pour utiliser l\'email du compte',
   'ku.user.display_email_on_website' => 'Afficher l\'email sur le site',
   'ku.user.display_email_in_sitemap' => 'Afficher l\'email dans le sitemap.xml',
+  'ku.user.display_website_on_website' => 'Afficher l\'url du site sur ce site',
+  'ku.user.display_website_in_sitemap' => 'Afficher l\'url du site dans le sitemap.xml',
 ];

@@ -43,4 +43,6 @@ return [
   'ku.user.public_email.help' => 'Leave empty to use the account email',
   'ku.user.display_email_on_website' => 'Display email on website',
   'ku.user.display_email_in_sitemap' => 'Display email in sitemap.xml',
+  'ku.user.display_website_on_website' => 'Display website url on this website',
+  'ku.user.display_website_in_sitemap' => 'Display website url in sitemap.xml',
 ];

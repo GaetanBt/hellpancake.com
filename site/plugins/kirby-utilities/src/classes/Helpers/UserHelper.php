@@ -52,9 +52,24 @@ class UserHelper
     return $user->username();
   }
 
-  public static function website(User $user): ?string
+  public static function website(User $user, UserInfoDestination $destination): ?string
   {
-    $website = self::metasField($user)->get('website');
+    $metas_field = self::metasField($user);
+
+    switch ($destination) {
+      case UserInfoDestination::SitemapXML:
+        if (false === $metas_field->display_website_in_sitemap()->toBool()) {
+          return null;
+        }
+        break;
+      case UserInfoDestination::Website:
+        if (false === $metas_field->display_website_on_website()->toBool()) {
+          return null;
+        }
+        break;
+    }
+
+    $website = $metas_field->get('website');
 
     if ($website->isNotEmpty()) {
       return $website;
