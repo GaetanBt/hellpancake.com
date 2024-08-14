@@ -27,9 +27,15 @@ return [
   'ku.site.seo.bots_to_exclude' => 'Bots to exclude list',
   'ku.site.seo.bots_to_exclude.name' => 'Name',
 
+  // Site feed tab
+  'ku.site.feed.tab' => 'Feed',
+  'ku.site.feed.atom_headline' => 'Atom feed configuration',
+  'ku.site.feed.atom_title' => 'Atom feed title',
+  'ku.site.feed.atom_subtitle' => 'Atom feed subtitle',
+
   // User metas blueprints
   'ku.user.metas' => 'Personal informations',
-  'ku.user.metas.help' => 'These informations are used for the Atom feed generation and on the post pages.',
+  'ku.user.metas.help' => 'These informations are used by the Kirby Utilities plugin for the Atom feed generation and on the post pages.',
   'ku.user.website' => 'Website',
   'ku.user.public_name' => 'Public name',
   'ku.user.public_name.help' => 'Leave empty to use the account name',
@@ -37,4 +43,6 @@ return [
   'ku.user.public_email.help' => 'Leave empty to use the account email',
   'ku.user.display_email_on_website' => 'Display email on website',
   'ku.user.display_email_in_sitemap' => 'Display email in sitemap.xml',
+  'ku.user.display_website_on_website' => 'Display website url on this website',
+  'ku.user.display_website_in_sitemap' => 'Display website url in sitemap.xml',
 ];

@@ -1,5 +1,6 @@
 <?php
 
+use GaetanBt\Kirby\Utilities\Seo;
 use GaetanBt\Kirby\Utilities\Helpers\PanelHelper;
 
 return [
@@ -8,5 +9,13 @@ return [
   'wearejust.twig.env.filters' => [
     'localizeDateField' => fn($date) => PanelHelper::localizeDateField($date)
   ],
-  'date.handler'  => 'intl'
+  'date.handler'  => 'intl',
+  'routes' => [
+    [
+      'pattern' => 'feed-(en|fr).xml',
+      'action' => function ($languageCode) {
+        return Seo::feed($languageCode);
+      }
+    ]
+  ]
 ];

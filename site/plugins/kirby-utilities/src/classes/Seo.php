@@ -93,4 +93,14 @@ class Seo
 
     return new Response($content, 'application/xml', 200);
   }
+
+  public static function feed(string $languageCode): Response
+  {
+    $pages = App::instance()->site()->children()->findBy('intendedTemplate', 'blog')->index();
+
+    $ignore = App::instance()->option('GaetanBt.kirby-utilities.seo.feed.ignore', []);
+    $content = snippet('ku/feed/atom', compact('pages', 'ignore', 'languageCode'), true);
+
+    return new Response($content, 'application/xml', 200);
+  }
 }

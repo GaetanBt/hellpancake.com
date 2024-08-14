@@ -27,9 +27,15 @@ return [
   'ku.site.seo.bots_to_exclude' => 'Liste des robots à exclure',
   'ku.site.seo.bots_to_exclude.name' => 'Nom',
 
+  // Site feed tab
+  'ku.site.feed.tab' => 'Flux',
+  'ku.site.feed.atom_headline' => 'Configuration du flux Atom',
+  'ku.site.feed.atom_title' => 'Titre du flux Atom',
+  'ku.site.feed.atom_subtitle' => 'Sous-titre du flux Atom',
+
   // User metas blueprints
   'ku.user.metas' => 'Informations personnelles',
-  'ku.user.metas.help' => 'Ces informations sont utilisées pour la génération du flux Atom et l\'affichage des articles.',
+  'ku.user.metas.help' => 'Ces informations sont utilisées par le plugin Kirby Utilities pour la génération du flux Atom et l\'affichage des articles.',
   'ku.user.website' => 'Site web',
   'ku.user.public_name' => 'Nom public',
   'ku.user.public_name.help' => 'Laisser vide pour utiliser le nom du compte',
@@ -37,4 +43,6 @@ return [
   'ku.user.public_email.help' => 'Laisser vide pour utiliser l\'email du compte',
   'ku.user.display_email_on_website' => 'Afficher l\'email sur le site',
   'ku.user.display_email_in_sitemap' => 'Afficher l\'email dans le sitemap.xml',
+  'ku.user.display_website_on_website' => 'Afficher l\'url du site sur ce site',
+  'ku.user.display_website_in_sitemap' => 'Afficher l\'url du site dans le sitemap.xml',
 ];

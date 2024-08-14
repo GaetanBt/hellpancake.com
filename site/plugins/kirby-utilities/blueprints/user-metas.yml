@@ -23,3 +23,9 @@ fields:
       display_email_in_sitemap:
         extends: ku/fields/toggle
         label: ku.user.display_email_in_sitemap
+      display_website_on_website:
+        extends: ku/fields/toggle
+        label: ku.user.display_website_on_website
+      display_website_in_sitemap:
+        extends: ku/fields/toggle
+        label: ku.user.display_website_in_sitemap
