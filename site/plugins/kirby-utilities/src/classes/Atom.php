@@ -6,7 +6,7 @@
 
 namespace GaetanBt\Kirby\Utilities;
 
-use GaetanBt\Kirby\Utilities\Exceptions\MissingRequiredAttributeException;
+use GaetanBt\Kirby\Utilities\Exception\MissingRequiredAttributeException;
 
 class Atom
 {

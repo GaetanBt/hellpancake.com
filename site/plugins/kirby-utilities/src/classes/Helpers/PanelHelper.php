@@ -3,6 +3,7 @@
 namespace GaetanBt\Kirby\Utilities\Helpers;
 
 use GaetanBt\Kirby\Utilities\Enum\FieldOrigin;
+use GaetanBt\Kirby\Utilities\Exception\InvalidOptionValueException;
 use IntlDateFormatter;
 use Kirby\Cms\App;
 use Kirby\Content\Field;
@@ -35,6 +36,10 @@ final class PanelHelper
    */
   public static function localizeDateField(Field $dateField, ?string $locale = null): string
   {
+    if ('intl' !== option( 'date.handler')) {
+      throw new InvalidOptionValueException('Date handler has to be set to `intl` to use PanelHelper::localizeDateField()');
+    }
+
     if (null === $locale) {
       $locale = App::instance()->language()->locale(LC_ALL);
     }
