@@ -6,12 +6,12 @@ use Kirby\Toolkit\Str;
 
 class StringHelper
 {
-  public static function withTrailingSlash(string $url): string
+  public static function withTrailingSlash(string $str): string
   {
-    if (false === Str::endsWith($url, '/')) {
-      $url .= '/';
+    if (false === Str::endsWith($str, '/')) {
+      $str .= '/';
     }
 
-    return $url;
+    return $str;
   }
 }
