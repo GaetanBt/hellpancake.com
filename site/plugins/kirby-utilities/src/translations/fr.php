@@ -35,7 +35,7 @@ return [
 
   // User metas blueprints
   'ku.user.metas' => 'Informations personnelles',
-  'ku.user.metas.help' => 'Ces informations sont utilisées pour la génération du flux Atom et l\'affichage des articles.',
+  'ku.user.metas.help' => 'Ces informations sont utilisées par le plugin Kirby Utilities pour la génération du flux Atom et l\'affichage des articles.',
   'ku.user.website' => 'Site web',
   'ku.user.public_name' => 'Nom public',
   'ku.user.public_name.help' => 'Laisser vide pour utiliser le nom du compte',

@@ -35,7 +35,7 @@ return [
 
   // User metas blueprints
   'ku.user.metas' => 'Personal informations',
-  'ku.user.metas.help' => 'These informations are used for the Atom feed generation and on the post pages.',
+  'ku.user.metas.help' => 'These informations are used by the Kirby Utilities plugin for the Atom feed generation and on the post pages.',
   'ku.user.website' => 'Website',
   'ku.user.public_name' => 'Public name',
   'ku.user.public_name.help' => 'Leave empty to use the account name',
