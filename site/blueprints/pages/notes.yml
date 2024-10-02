@@ -1,0 +1,66 @@
+title:
+  en: Notes
+  fr: Notes
+
+options:
+  delete: false
+
+tabs:
+  content:
+    label:
+      en: Content
+      fr: Contenu
+    columns:
+      main:
+        width: 1/2
+        sections:
+          drafts:
+            label:
+              en: Drafts
+              fr: Brouillons
+            type: pages
+            status: draft
+            template: note
+            empty:
+              en: No note drafts
+              fr: Aucun brouillon de note
+
+          in_review:
+            label:
+              en: In review
+              fr: En relecture
+            type: pages
+            status: unlisted
+            empty:
+              en: No note under review
+              fr: Aucune note en relecture
+
+          fields:
+            type: fields
+            fields:
+              categories:
+                label:
+                  en: Notes categories
+                  fr: Catégories de notes
+                type: structure
+                fields:
+                  name:
+                    label:
+                      en: Name
+                      fr: Nom
+                    type: text
+
+      sidebar:
+        width: 1/2
+        sections:
+          published:
+            label:
+              en: Published notes
+              fr: Notes publiées
+            type: pages
+            status: listed
+            empty:
+              en: No published notes yet
+              fr: Aucune note publiée
+
+  seo: ku/seo/page

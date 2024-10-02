@@ -1,0 +1,26 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+  <h1>{{ page.title }}</h1>
+
+  <ol class="list-reset">
+    {% for note in kirby.collection('notes') %}
+      <li>
+        <article class="Post{{ loop.last ? " mb-0" }}">
+          <h2 class="mb-0">
+            <a class="Post-title" href="{{ note.url }}">{{ note.title }}</a>
+          </h2>
+          <small class="text-muted">
+            <time datetime="{{ note.published_on }}" class="Post-date has-icon-before">{{ note.published_on | localizeDateField }}</time>
+            {% if note.tags | length %}
+              <span class="Post-tags has-icon-before">{{ note.tags }}</span>
+            {% endif %}
+          </small>
+          {% if note.excerpt.isNotEmpty %}
+            {{ note.excerpt | raw }}
+          {% endif %}
+        </article>
+      </li>
+    {%- endfor -%}
+  </ol>
+{% endblock %}
