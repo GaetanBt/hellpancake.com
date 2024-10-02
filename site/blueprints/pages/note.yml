@@ -36,6 +36,7 @@ tabs:
                       - list
                       - table
                       - markdown
+                      - code
                       - quote
                   media:
                     label:

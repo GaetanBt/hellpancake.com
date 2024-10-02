@@ -14,3 +14,9 @@
     {{ block.toHtml | raw }}
   {% endfor %}
 {% endblock %}
+
+{% block js %}
+  {%- if containsCodeBlock -%}
+    {{ js('assets/vendors/prism/prism.js', true) }}
+  {%- endif -%}
+{% endblock %}
