@@ -14,7 +14,7 @@ return [
     [
       'pattern' => 'feed-(en|fr).xml',
       'action' => function ($languageCode) {
-        return Seo::feed($languageCode);
+        return Seo::feed($languageCode, 'notes');
       }
     ]
   ]
