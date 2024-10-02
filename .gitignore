@@ -5,6 +5,10 @@
 node_modules/
 _site/
 
+# Styles
+# ------------
+/assets/*.min.css
+
 # Kirby stuff
 # ------------
 

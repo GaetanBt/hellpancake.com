@@ -7,7 +7,7 @@
     "clean": "del-cli _site",
     "build:eleventy": "eleventy",
     "serve:eleventy": "eleventy --serve",
-    "build:css": "postcss src/assets/style.css --dir _site/assets/",
+    "build:css": "postcss assets/style.css --output assets/style.min.css",
     "watch:css": "npm run build:css -- --watch",
     "build": "npm-run-all --sequential clean build:eleventy build:css",
     "serve": "npm-run-all --sequential clean --parallel serve:eleventy watch:css",
@@ -28,15 +28,15 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-navigation": "^0.1.6",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
-    "autoprefixer": "^10.0.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.2.2",
+    "autoprefixer": "^10.4.20",
     "cross-env": "^7.0.3",
-    "cssnano": "^4.1.10",
+    "cssnano": "^7.0.5",
     "del-cli": "^3.0.1",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.2.13",
-    "postcss-cli": "^8.2.0",
-    "postcss-hash": "^2.0.0",
-    "postcss-import": "^14.0.0"
+    "postcss": "^8.4.41",
+    "postcss-cli": "^11.0.0",
+    "postcss-hash": "^3.0.0",
+    "postcss-import": "^16.1.0"
   }
 }
