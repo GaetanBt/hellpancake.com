@@ -1,0 +1,22 @@
+name:
+  en: Featured content
+  fr: Contenu mis en avant
+
+icon: info
+
+fields:
+  mode:
+    label:
+      en: Mode
+      fr: Mode
+    type: select
+    default: info
+    options:
+      info:
+        en: Info
+        fr: Info
+  text:
+    label:
+      en: Content
+      fr: Contenu
+    type: textarea

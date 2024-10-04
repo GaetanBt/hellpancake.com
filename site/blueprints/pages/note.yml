@@ -38,6 +38,7 @@ tabs:
                       - markdown
                       - code
                       - quote
+                      - callout
                   media:
                     label:
                       en: Media
