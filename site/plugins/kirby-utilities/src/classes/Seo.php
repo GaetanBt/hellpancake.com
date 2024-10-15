@@ -86,7 +86,7 @@ class Seo
 
   public static function sitemap(): Response
   {
-    $pages = App::instance()->site()->pages()->index();
+    $pages = App::instance()->site()->pages()->index()->listed();
 
     $ignore = App::instance()->option('GaetanBt.kirby-utilities.seo.sitemap.ignore', ['error']);
     $content = snippet('ku/seo/sitemap', compact('pages', 'ignore'), true);
